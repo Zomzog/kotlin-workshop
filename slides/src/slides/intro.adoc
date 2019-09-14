@@ -1,0 +1,137 @@
+== Why Kotlin
+
+[fragment]#Java Interoperability#
+
+[NOTE.speaker]
+--
+the new language is going to be introduced gradually, 
+and needs to interoperate smoothly with the existing code base
+--
+
+[fragment]#Compilation speed#
+
+[NOTE.speaker]
+--
+long enough to compile with javac,
+and we cannot afford making it any slower
+--
+
+[fragment]#Visibility#
+
+[NOTE.speaker]
+--
+Jetbrain is more than just an IDE 
+--
+
+== Kotlin bases
+
+[source, java]
+----
+    private String pony = "Pony";
+----
+
+[source, kotlin]
+----
+    hidden
+----
+
+
+== Kotlin bases
+
+[source, java]
+----
+    private String pony = "Pony";
+----
+
+[source, kotlin]
+----
+    var pony : String = "Pony";
+----
+
+== Kotlin bases
+
+[source, java]
+----
+    private String pony = "Pony";
+----
+
+[source, kotlin]
+----
+    var pony : String = "Pony"
+----
+
+Optional ;
+
+== Kotlin bases
+
+[source, java]
+----
+    private String pony = "Pony";
+----
+
+[source, kotlin]
+----
+    var pony = "Pony"
+----
+
+type inferred
+
+
+== Kotlin bases
+
+[source, java]
+----
+    private final String pony = "Pony";
+----
+
+[source, kotlin]
+----
+    val pony = "Pony"
+----
+
+ val means unmodifiable
+ var means modifiable
+
+== Null safty
+
+[source, kotlin]
+----
+    val pony : String = null // KO
+
+----
+
+== Null safty
+
+[source, kotlin]
+----
+    val pony : String = null // KO
+    val pony : String? = null // KO
+----
+
+== Constructor
+
+[source, kotlin]
+----
+class Pony(name: String) {
+
+
+
+}
+----
+
+== Constructor
+
+[source, kotlin]
+----
+class Pony(name: String) {
+    constructor(other: Pony) {
+        // do something
+    }
+}
+----
+
+
+
+== Here we go !
+
+image:here_we_go.png[width=100vw,height=100vw]

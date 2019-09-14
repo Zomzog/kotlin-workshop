@@ -1,0 +1,56 @@
+== POJO to POKO
+
+The first step into kotlin wil be to upgrate our POJO.
+Let's take a look to the Pony class we will create the equivalent in kotlin
+
+Right clic on Kotlin source folder -> `new Kotlin file/class`
+Named it `bzh.zomzog.kotlinworkshop.domain.Pony` and it will be a `Class` 
+
+In the java version we have four fileds, 
+let's start with the id ;
+[code, java]
+    private final String id;
+[code]
+
+We use default getter/setter so we can use inferred one and remove `private`
+
+Semicolon are optionnals so we can remove it. 
+
+It's final so it's a `var`
+
+It's a nullable String so it will be `id: String?`
+
+So we have `val id: String` 
+
+These properties must be initialized into the constructor so we have `class Pony(val id: String)`
+
+Let's do the same for other properties 
+
+// Trouver comment cacher du code spoiler alert
+
+[code, kotlin]
+class Pony(
+    val id: String?,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime?
+)
+[code]
+
+If we looks at Pony.java there is more than setters,
+we have generated hashcode, equals and toString.
+
+If you are familiar with `lombok` library it's a `@Data`.
+This is native in kotlin, 
+it's a `data class` this required at least one property and will do what we need.
+
+So now we have 
+
+[code, kotlin]
+data class Pony(
+    val id: String?,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime?
+)
+[code]

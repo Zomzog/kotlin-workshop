@@ -1,0 +1,7 @@
+image:https://travis-ci.org/Zomzog/kotlin-workshop.svg?branch=master["Build Status", link="https://travis-ci.org/Zomzog/kotlin-workshop"]
+
+== Kotlin workshop
+
+Source: /example
+
+Slide: /slides
