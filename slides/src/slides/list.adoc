@@ -1,0 +1,310 @@
+== List
+
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+[NOTE.speaker]
+--
+
+--
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, hideCode]
+----
+ .
+----
+[source, hideCode]
+----
+ .
+----
+[NOTE.speaker]
+--
+
+--
+
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, kotlin]
+----
+var twoVal  = listOf("val1", "val2")
+----
+[source, hideCode]
+----
+.
+----
+[NOTE.speaker]
+--
+They are immutable
+--
+
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, kotlin]
+----
+var twoVal  = listOf("val1", "val2")
+----
+[source, kotlin]
+----
+var mutable = mutableListOf("val1", "val2")
+----
+[NOTE.speaker]
+--
+
+--
+
+== Set
+
+[source, kotlin]
+----
+var empty   = emptySet<String>()
+----
+[source, kotlin]
+----
+var twoVal  = setOf("val1", "val2")
+----
+[source, kotlin]
+----
+var mutable = mutableSetOf("val1", "val2")
+----
+[NOTE.speaker]
+--
+
+--
+
+== Set
+
+[source, kotlin]
+----
+var empty   = emptyMap<String, String>()
+----
+[source, kotlin]
+----
+var twoVal  = mapOf("key" to "val")
+----
+[source, kotlin]
+----
+var mutable = mutableMapOf("key" to "val")
+----
+[NOTE.speaker]
+--
+--
+
+
+== Functional way
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map({ it -> it.toUpperCase() })
+----
+
+[NOTE.speaker]
+--
+Direct call of functionnal without using a stream
+--
+
+== Functional way
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map({ it.toUpperCase() })
+----
+
+[NOTE.speaker]
+--
+Default lambda parameter is `it`
+--
+
+== Functional way
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map { it.toUpperCase() }
+----
+
+[NOTE.speaker]
+--
+Kotlin convention if last parameter is a lambda it can be outside parentheses
+DSL ? 
+--
+
+== Stream ?
+
+[source, kotlin]
+----
+listOf("val1", "val2", "val3")
+    .map { it.toUpperCase() }
+    .onEach { println(it) }
+    .filter { it == "VAL2" }
+    .first()
+----
+
+
+[source, kotlin]
+----
+VAL1
+VAL2
+VAL3
+----
+
+[NOTE.speaker]
+--
+List are not lazy
+--
+
+== Stream ?
+
+[source, kotlin]
+----
+listOf("val1", "val2", "val3")
+    .asSequence() // or sequenceOf(...)
+    .map { it.toUpperCase() }
+    .onEach { println(it) }
+    .filter { it == "VAL2" }
+    .first()
+----
+
+
+[source, kotlin]
+----
+VAL1
+VAL2
+----
+
+[NOTE.speaker]
+--
+Sequence are lazy
+--
+
+== Your turn
+
+Take a look to `PonyService.kt` try to implement `list()`
+
+For this you must call `ponyRepository.findAll()` 
+and use `mapper.map(MongoPony)` on each element of the list
+
+All tests of `PonyServiceFindAllTest` must be ok.
+
+== Review
+
+[source, kotlin]
+----
+fun list(): List<Pony> {
+    return ponyRepository.findAll()
+            .map { mapper.map(it) }
+}
+----
+
+[source, hideCode]
+----
+.
+.
+----
+
+    
+== Fun with more fun
+
+[source, kotlin]
+----
+fun list(): List<Pony> {
+    return ponyRepository.findAll()
+            .map { mapper.map(it) }
+}
+----
+
+[source, hideCode]
+----
+fun list(): List<Pony> = ponyRepository.findAll()
+            .map { mapper.map(it) }
+----
+
+[NOTE.speaker]
+--
+When the body is simple we can use expression body
+--
+
+
+== Fun with more fun
+
+[source, kotlin]
+----
+fun list(): List<Pony> {
+    return ponyRepository.findAll()
+            .map { mapper.map(it) }
+}
+----
+
+[source, hideCode]
+----
+fun list() = ponyRepository.findAll()
+            .map { mapper.map(it) }
+----
+
+[NOTE.speaker]
+--
+Type infered in expression body
+--
+
+== Expression everywhere
+
+[source, kotlin]
+----
+var max: Int
+if (a > b) {
+    max = a
+} else {
+    max = b
+}
+----
+
+== Expression
+
+[source, kotlin]
+----
+var max =
+if (a > b) {
+    a
+} else {
+    b
+}
+----
+  
+[NOTE.speaker]
+--
+Last expression is the value of a block:
+Take if has example but works the same with while (see later?)
+--
+
+== Your turn
+
+Take a look to `PonyService.kt` try to implement `save()``
+
+If the id of the pony is null use `mapper.mapNew(pony)`
+else use `ponyRepository.findById(ObjectId(pony.id))` and `mapper.update(fromDb, pony)`
+
+and then call `ponyRepository.save(toSave)`
+
+All tests of `PonyServiceSaveTest` must be ok.

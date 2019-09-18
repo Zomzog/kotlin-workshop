@@ -14,26 +14,20 @@ class PonyService(private val ponyRepository: PonyRepository,
                   private val mapper: PonyMapper) {
 
     fun list() = ponyRepository.findAll()
-            .map { mapper.map(it) }
-
+            .map { it.toPony() }
 
     fun save(pony: Pony): Pony {
         val updated = if (null == pony.id) {
-            ponyRepository.save(pony.toNewPonyMongo())
+//            ponyRepository.save(pony.toNewPonyMongo())
+            mapper.mapNew(pony)
         } else {
-            val fromDb = ponyRepository.findById(ObjectId(pony.id))
-            fromDb.map { mapper.update(it, pony) }
+            ponyRepository.findById(ObjectId(pony.id))
+                    .map { mapper.update(it, pony) }
                     .orElseThrow { RuntimeException("Pony not found") } // TODO Named exception
         }
-        Pony(name="name", type = PonyType.Pegasi)
+        ponyRepository.save(updated)
         return mapper.map(updated)
     }
 
-    fun Pony.toNewPonyMongo(): PonyMongo {
-        return PonyMongoBuilder.newBuilder()
-                .name(this.name)
-                .type(this.type)
-                .createdAt(LocalDateTime.now())
-                .build()
-    }
+    fun PonyMongo.toPony() = Pony(this.id.toString(), this.name, this.type, this.createdAt)
 }

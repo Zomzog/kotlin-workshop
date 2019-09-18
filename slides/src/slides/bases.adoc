@@ -26,7 +26,7 @@ Separated for easiest management but can be mixed
 
 [source, kotlin]
 ----
-fun        {
+fun              {
   
 }
 ----
@@ -41,7 +41,7 @@ We start with fun
 
 [source, kotlin]
 ----
-fun main() {
+fun main()       {
   
 }
 ----
@@ -51,11 +51,34 @@ fun main() {
 Args are optionnal, println for system out println
 --
 
+
 == Top-level functions
 
 [source, kotlin]
 ----
-fun main() {
+fun main(): Unit {
+  
+}
+----
+
+[NOTE.speaker]
+--
+Return type Unit like void in java
+
+It's optional to specify it for functions
+--
+
+=== Unit digression
+
+Unit is an object
+
+Unit.toString()
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun main() : Unit {
     println("hello world")
 }
 ----
@@ -344,43 +367,19 @@ pony.friendsCount = pony.name.length
 useless but example of get and set
 --
 
-== Data class
-[source, java]
-----
-public class Pony {
+== POKO
 
-    private String name;
-
-    // Getter Setter
-
-    @Override
-    public boolean equals(Object o) { }
-
-    @Override
-    public int hashCode() { }
-
-    @Override
-    public String toString() { }
-}
-----
-
-== Data class
 [source, kotlin]
 ----
-class Pony(val name: String?) {
+class Pony(val name: String) {
 
-
-    override fun equals(o: Any?): Boolean { }
-
-    override fun hashCode(): Int { }
-
-    override fun toString(): String {  }
+    override fun toString(): String { return name }
 }
 ----
 
 == Data class
 ----
-data class Pony(val name: String?)
+data class Pony(val name: String)
 ----
 
 
@@ -391,16 +390,6 @@ Free equals, hashcode, toString but also copy
 
 == Your turn
 
-Let's try to translate *Pony.java*
+Create your own data class and replace your hello world variable
 
-[fragment]#Create kotlin class in the same package#
-
-[fragment]#Write the data class#
-
-[fragment]#Delete the java version and run all tests#
-
-
-[NOTE.speaker]
---
-Proposer de copier le code java pour voir la traduction intellij en action 
---
+tips : class can be created in the same file or in a dedicated one
