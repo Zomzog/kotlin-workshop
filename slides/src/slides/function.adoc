@@ -1,0 +1,260 @@
+== Method with fun
+
+[source, java]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+
+[source, hideCode]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+[transition=fade]
+== Method with fun
+
+[source, java]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+[source, kotlin]
+----
+fun                    { 
+  
+}
+----
+
+[NOTE.speaker]
+--
+Start with fun 
+--
+
+[transition=fade]
+== Method with fun
+
+[source, java]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+[source, kotlin]
+----
+fun list()             { 
+    
+}
+----
+
+[NOTE.speaker]
+--
+Has for property we start with method name,
+args
+--
+
+[transition=fade]
+== Method with fun
+
+[source, java]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+[source, kotlin]
+----
+fun list(): List<Pony> { 
+     
+}
+----
+
+[NOTE.speaker]
+--
+Return type
+--
+
+[transition=fade]
+== Method with fun
+
+[source, java]
+----
+public List<Pony> list() {
+    return ponyRepository.findAll();
+}
+----
+
+[source, kotlin]
+----
+fun list(): List<Pony> { 
+     return ponyRepository.findAll()
+}
+----
+
+[transition=fade]
+== Fun with more fun
+
+[source, kotlin]
+----
+fun list(): List<Pony> { 
+     return ponyRepository.findAll()
+}
+----
+
+[source, hideCode]
+----
+.
+----
+
+[transition=fade]
+== Fun with more fun
+
+[source, kotlin]
+----
+fun list(): List<Pony> { 
+     return ponyRepository.findAll()
+}
+----
+
+[source, kotlin]
+----
+fun list(): List<Pony> = ponyRepository.findAll()
+----
+[NOTE.speaker]
+--
+When the body is simple we can use expression body
+--
+
+[transition=fade]
+== Fun with more fun
+
+[source, kotlin]
+----
+fun list(): List<Pony> { 
+     return ponyRepository.findAll()
+}
+----
+
+[source, kotlin]
+----
+fun list() = ponyRepository.findAll()
+----
+
+[NOTE.speaker]
+--
+Type infered in expression body
+--
+
+[transition=fade]
+== Expression
+
+[source, kotlin]
+----
+var max: Int
+if (a > b) {
+    max = a
+} else {
+    max = b
+}
+----
+
+[transition=fade]
+== Expression
+
+[source, kotlin]
+----
+var max =
+if (a > b) {
+    a
+} else {
+    b
+}
+----
+  
+[NOTE.speaker]
+--
+Last expression is the value of a block:
+Take if has example but works the same with while (see later?)
+--
+
+[transition=fade]
+== Collection
+
+[source, java]
+----
+myList.stream()
+      .map(it -> multiply(it, 2))
+      .collect(Collectors.toList());
+----
+
+[source, hideCode]
+----
+myList.map(it -> multiply(it, 2))
+----
+
+[transition=fade]
+== Collection
+
+[source, java]
+----
+myList.stream()
+      .map(it -> multiply(it, 2))
+      .collect(Collectors.toList());
+----
+
+[source, kotlin]
+----
+myList.map({ it -> multiply(it, 2) })
+----
+
+
+[transition=fade]
+== Lambda
+
+[source, kotlin]
+----
+myList.map({ it -> multiply(it, 2) })
+----
+
+[transition=fade]
+== Lambda
+[source, kotlin]
+----
+myList.map({ multiply(it, 2) })
+----
+
+[NOTE.speaker]
+--
+It by default
+--
+
+[transition=fade]
+== Lambda
+[source, kotlin]
+----
+myList.map { multiply(it, 2) }
+----
+
+[NOTE.speaker]
+--
+Kotlin convention if last parameter is a lambda it can be outside parentheses
+--
+
+
+== Your turn
+
+Let's try to translate *PonyService.java*
+
+[fragment]#Create kotlin class in the same package#
+
+[fragment]#Write the new service#
+
+[fragment]#Delete the java version and run all tests#

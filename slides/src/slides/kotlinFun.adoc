@@ -1,0 +1,110 @@
+== Named parameters
+
+[source, kotlin]
+----
+data class Pony(
+    val id: String? = null,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime? = null
+)
+----
+
+[source, kotlin]
+----
+val mlp = Pony(null, "name", Pegasi, null)
+----
+
+[NOTE.speaker]
+--
+In this constructor 2 parameters has default values
+--
+== Named parameters
+
+[source, kotlin]
+----
+data class Pony(
+    val id: String? = null,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime? = null
+)
+----
+
+[source, kotlin]
+----
+val mlp = Pony(name="name", type = Pegasi)
+----
+
+[NOTE.speaker]
+--
+Multiple constructor with default values can be simplified to one
+--
+
+== Copy Data class
+
+[source, kotlin]
+----
+fun copy(name: String = this.name, type: PonyType = this.type) = Pony(name, type)
+----
+
+[NOTE.speaker]
+--
+It's often the case that we need to copy an object altering some of its properties,
+--
+
+== Copy Data class
+
+[source, kotlin]
+----
+val newOne = oldOne.copy(name="Pinkie")
+----
+
+[NOTE.speaker]
+--
+It's offerd by data class and named parameters
+--
+
+== Extension function
+
+[source, kotlin]
+----
+val mongoObject = ponyMapper.map(pony)
+----
+
+[NOTE.speaker]
+--
+Currently we have external mapper
+Don't want to pollute Pony class
+--
+
+== Extension function
+
+[source, kotlin]
+----
+val mongoObject = pony.toNewPonyMongo()
+----
+
+[NOTE.speaker]
+--
+Currently we have external mapper
+Don't want to pollute Pony class
+--
+== Extension function
+
+[source, kotlin]
+----
+fun Pony.toNewPonyMongo() = PonyMongo(this.id,...)
+----
+
+[NOTE.speaker]
+--
+This is resolved as this of Pony
+No code is added to Pony class
+Do not override existing functions
+--
+
+
+== Your turn
+
+Replace one of the mapper usage in *PonyService.java* by an extension method

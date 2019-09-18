@@ -1,0 +1,406 @@
+== Project structure
+
+* Gradle build with Kotlin DSL
+* Separated kotlin/java
+
+[NOTE.speaker]
+--
+Just a first example of what can be done with Kotlin
+
+Separated for easiest management but can be mixed
+--
+
+== Functions first-class citizen
+
+[fragment]#stored in variables#
+
+[fragment]#stored in data structures#
+
+[fragment]#passed as arguments#
+
+[fragment]#returned from functions#
+
+[fragment]#don't need classes#
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun        {
+  
+}
+----
+
+[NOTE.speaker]
+--
+We start with fun
+
+--
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun main() {
+  
+}
+----
+
+[NOTE.speaker]
+--
+Args are optionnal, println for system out println
+--
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun main() {
+    println("hello world")
+}
+----
+
+[NOTE.speaker]
+--
+semicolon optionals
+
+Create your first kotlin hello world
+--
+
+== Your turn
+
+[source, kotlin]
+----
+fun main() {
+    println("hello world")
+}
+----
+
+Create your first kotlin hello world
+
+=== Top-level functions
+
+[source, kotlin]
+----
+fun main() {
+    println("hello world");
+}
+----
+
+== Variables
+
+[source, java]
+----
+    private String pony = "Pinkie";
+----
+
+[source, hideCode]
+----
+    .
+----
+
+== Variables
+
+[source, java]
+----
+    String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+    var 
+----
+
+== Variables
+
+[source, java]
+----
+    String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+    var pony
+----
+
+== Variables
+
+[source, java]
+----
+    String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+    var pony: String = "Pinkie"
+----
+
+== Variables
+
+[source, java]
+----
+    String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+    var pony = "Pinkie"
+----
+
+[NOTE.speaker]
+--
+type inferred
+--
+
+== Variables
+
+[source, java]
+----
+    final String pony = "Pinkie";
+----
+
+[source, hideCode]
+----
+    val pony = "Pinkie"
+----
+
+== Values
+
+[source, java]
+----
+    final String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+    val pony = "Pinkie"
+----
+
+== Your turn
+
+Update the main for printing "hello " + pony
+
+== Review
+
+[source, kotlin]
+----
+fun main() {
+    val pony = "Pinkie"
+    println("hello " + pony)
+}
+----
+
+== String template
+
+[source, kotlin]
+----
+fun main() {
+    val pony = "Pinkie"
+    println("hello $pony")
+}
+----
+
+== String template
+
+[source, kotlin]
+----
+fun main() {
+    val pony = "Pinkie"
+    println("hello ${pony.toUpperCase()}")
+}
+----
+
+[NOTE.speaker]
+--
+surround with brace for calling complex
+--
+
+== Null     
+
+[source, kotlin]
+----
+    val pony : String = null
+----
+
+[NOTE.speaker]
+--
+Do you try this? Compiler issue
+--
+
+== Null safty
+
+[source, kotlin]
+----
+    val pony : String? = null
+----
+
+== Class
+[source, hideCode]
+----
+.
+
+
+
+.
+----
+
+== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+
+
+}
+----
+
+=== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+      get() { return field }
+      set(value) { field = value }
+}
+----
+
+
+=== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+
+    var friendsCount: Int = 1
+}
+----
+
+
+== Constructor
+[source, hideCode]
+----
+class Pony {
+    var name: String
+    var friendsCount: Int = 0
+
+    constructor(name: String, friendsCount: Int = 0){
+        this.name = name
+        this.friendsCount = friendsCount
+    }
+}
+----
+
+== Constructor
+
+[source, kotlin]
+----
+class Pony(name: String, friendsCount: Int = 0) {
+    var name: String = name
+
+    var friendsCount = friendsCount
+}
+----
+
+[NOTE.speaker]
+--
+friendsCount with default value see it later
+--
+== Constructor
+
+[source, kotlin]
+----
+class Pony(val name: String,
+           var friendsCount: Int = 0) {
+
+
+}
+----
+
+== Calling constructor
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+----
+
+[NOTE.speaker]
+--
+no need of new
+--
+
+== Properties access
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+pony.friendsCount = pony.name.length
+----
+
+[NOTE.speaker]
+--
+useless but example of get and set
+--
+
+== Data class
+[source, java]
+----
+public class Pony {
+
+    private String name;
+
+    // Getter Setter
+
+    @Override
+    public boolean equals(Object o) { }
+
+    @Override
+    public int hashCode() { }
+
+    @Override
+    public String toString() { }
+}
+----
+
+== Data class
+[source, kotlin]
+----
+class Pony(val name: String?) {
+
+
+    override fun equals(o: Any?): Boolean { }
+
+    override fun hashCode(): Int { }
+
+    override fun toString(): String {  }
+}
+----
+
+== Data class
+----
+data class Pony(val name: String?)
+----
+
+
+[NOTE.speaker]
+--
+Free equals, hashcode, toString but also copy 
+--
+
+== Your turn
+
+Let's try to translate *Pony.java*
+
+[fragment]#Create kotlin class in the same package#
+
+[fragment]#Write the data class#
+
+[fragment]#Delete the java version and run all tests#
+
+
+[NOTE.speaker]
+--
+Proposer de copier le code java pour voir la traduction intellij en action 
+--

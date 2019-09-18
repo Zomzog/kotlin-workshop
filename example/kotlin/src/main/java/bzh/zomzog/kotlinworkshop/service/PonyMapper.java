@@ -20,7 +20,7 @@ public class PonyMapper {
                 .build();
     }
 
-    public PonyMongo map(Pony pony) {
+    public PonyMongo mapNew(Pony pony) {
         return PonyMongoBuilder.newBuilder()
                 .name(pony.getName())
                 .type(pony.getType())

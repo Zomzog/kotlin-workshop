@@ -16,7 +16,7 @@ module.exports = function () {
 
   return map((file, next) => {
     // Convert the document 'presentation.adoc' using the reveal.js converter
-    const attributes = {'revealjsdir': 'node_modules/reveal.js@'};
+    const attributes = {'revealjsdir': 'node_modules/reveal.js@', 'transition': 'fade'};
     const options = {safe: 'safe', backend: 'revealjs', attributes: attributes};
     asciidoctor.convertFile(file.path, options);
 
