@@ -107,4 +107,4 @@ Do not override existing functions
 
 == Your turn
 
-Replace one of the mapper usage in *PonyService.java* by an extension method
+Replace the mapper usage in *list* by an extension method

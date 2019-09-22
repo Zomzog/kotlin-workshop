@@ -1,7 +1,8 @@
 == Project structure
 
-* Gradle build with Kotlin DSL
-* Separated kotlin/java
+[fragment]#Gradle build with Kotlin DSL#
+
+[fragment]#Separated kotlin/java#
 
 [NOTE.speaker]
 --
@@ -37,6 +38,7 @@ We start with fun
 
 --
 
+[transition=fade]
 == Top-level functions
 
 [source, kotlin]
@@ -51,7 +53,7 @@ fun main()       {
 Args are optionnal, println for system out println
 --
 
-
+[transition=fade]
 == Top-level functions
 
 [source, kotlin]
@@ -68,7 +70,7 @@ Return type Unit like void in java
 It's optional to specify it for functions
 --
 
-=== Unit digression
+== Unit digression
 
 Unit is an object
 
@@ -101,20 +103,11 @@ fun main() {
 
 Create your first kotlin hello world
 
-=== Top-level functions
-
-[source, kotlin]
-----
-fun main() {
-    println("hello world");
-}
-----
-
 == Variables
 
 [source, java]
 ----
-    private String pony = "Pinkie";
+String pony = "Pinkie";
 ----
 
 [source, hideCode]
@@ -126,48 +119,48 @@ fun main() {
 
 [source, java]
 ----
-    String pony = "Pinkie";
+String pony = "Pinkie";
 ----
 
 [source, kotlin]
 ----
-    var 
+var 
 ----
 
 == Variables
 
 [source, java]
 ----
-    String pony = "Pinkie";
+String pony = "Pinkie";
 ----
 
 [source, kotlin]
 ----
-    var pony
+var pony
 ----
 
 == Variables
 
 [source, java]
 ----
-    String pony = "Pinkie";
+String pony = "Pinkie";
 ----
 
 [source, kotlin]
 ----
-    var pony: String = "Pinkie"
+var pony: String = "Pinkie"
 ----
 
 == Variables
 
 [source, java]
 ----
-    String pony = "Pinkie";
+String pony = "Pinkie";
 ----
 
 [source, kotlin]
 ----
-    var pony = "Pinkie"
+var pony = "Pinkie"
 ----
 
 [NOTE.speaker]
@@ -179,29 +172,31 @@ type inferred
 
 [source, java]
 ----
-    final String pony = "Pinkie";
+final String pony = "Pinkie";
 ----
 
 [source, hideCode]
 ----
-    val pony = "Pinkie"
+val pony = "Pinkie"
 ----
 
 == Values
 
 [source, java]
 ----
-    final String pony = "Pinkie";
+final String pony = "Pinkie";
 ----
 
 [source, kotlin]
 ----
-    val pony = "Pinkie"
+val pony = "Pinkie"
 ----
 
 == Your turn
 
-Update the main for printing "hello " + pony
+Update the main for printing
+
+"hello " + variable
 
 == Review
 
@@ -242,7 +237,7 @@ surround with brace for calling complex
 
 [source, kotlin]
 ----
-    val pony : String = null
+val nullable : String = null
 ----
 
 [NOTE.speaker]
@@ -254,8 +249,146 @@ Do you try this? Compiler issue
 
 [source, kotlin]
 ----
-    val pony : String? = null
+val nullable : String? = null
 ----
+
+== Null safty
+
+[source, kotlin]
+----
+nullable.toUpperCase() // KO
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+How do we access a nullable ?
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Like optional in java, 
+we know not null because tested
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Same thing but simplified
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase() ?: ""
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Elvis operator for else null
+--
+
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase() ?: ""
+----
+
+[source, kotlin]
+----
+nullable!!.toUpperCase()
+----
+
+[NOTE.speaker]
+--
+From java but know it's not null?
+In any case we know it can be null and we make a choice
+--
 
 == Class
 [source, hideCode]
@@ -278,7 +411,7 @@ class Pony {
 }
 ----
 
-=== Class
+== Class
 
 [source, kotlin]
 ----
@@ -290,7 +423,7 @@ class Pony {
 ----
 
 
-=== Class
+== Class
 
 [source, kotlin]
 ----
@@ -303,11 +436,25 @@ class Pony {
 
 
 == Constructor
-[source, hideCode]
+[source, kotlin]
 ----
 class Pony {
     var name: String
-    var friendsCount: Int = 0
+    var friendsCount: Int
+
+
+
+
+
+}
+----
+
+== Constructor
+[source, kotlin]
+----
+class Pony {
+    var name: String
+    var friendsCount: Int
 
     constructor(name: String, friendsCount: Int = 0){
         this.name = name
@@ -322,8 +469,12 @@ class Pony {
 ----
 class Pony(name: String, friendsCount: Int = 0) {
     var name: String = name
-
     var friendsCount = friendsCount
+
+
+
+
+
 }
 ----
 
@@ -337,6 +488,10 @@ friendsCount with default value see it later
 ----
 class Pony(val name: String,
            var friendsCount: Int = 0) {
+
+
+
+
 
 
 }
@@ -361,6 +516,8 @@ no need of new
 val pony = Pony("Rainbow", 3)
 pony.friendsCount = pony.name.length
 ----
+
+créer des getter setter
 
 [NOTE.speaker]
 --

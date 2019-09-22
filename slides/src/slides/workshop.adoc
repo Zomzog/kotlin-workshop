@@ -141,9 +141,9 @@ fun list(): List<Pony> {
 
 Collector is not needed the result is already a list
 
-=== ADVANCED TIPS
+== ADVANCED TIPS
 
-==== Lambda
+== Lambda
 When the last parameter of a function is a lambda,
 you can put it into braces.
 
@@ -151,7 +151,7 @@ In our case it will be `.map { it -> mapper.map(it) }
 
 By default lambda parameter is named `it` so it can be simplifed to `.map { mapper.map(it) }
 
-==== Expression body
+== Expression body
 
 When the body is simple we can use expression body
 
@@ -170,7 +170,7 @@ fun list() = ponyRepository.findAll()
 ----
 
 
-=== Save
+== Save
 
 [source, java]
 ----

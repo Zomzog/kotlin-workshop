@@ -235,7 +235,7 @@ fun list(): List<Pony> {
 }
 ----
 
-[source, hideCode]
+[source, kotlin]
 ----
 fun list(): List<Pony> = ponyRepository.findAll()
             .map { mapper.map(it) }
@@ -257,7 +257,7 @@ fun list(): List<Pony> {
 }
 ----
 
-[source, hideCode]
+[source, kotlin]
 ----
 fun list() = ponyRepository.findAll()
             .map { mapper.map(it) }
@@ -268,7 +268,7 @@ fun list() = ponyRepository.findAll()
 Type infered in expression body
 --
 
-== Expression everywhere
+== Expression
 
 [source, kotlin]
 ----
@@ -291,6 +291,17 @@ if (a > b) {
     b
 }
 ----
+
+== Expression
+
+[source, kotlin]
+----
+var max = if (a > b) a else b
+
+
+
+.
+----
   
 [NOTE.speaker]
 --
@@ -300,7 +311,7 @@ Take if has example but works the same with while (see later?)
 
 == Your turn
 
-Take a look to `PonyService.kt` try to implement `save()``
+Take a look to `PonyService.kt` try to implement `save()`
 
 If the id of the pony is null use `mapper.mapNew(pony)`
 else use `ponyRepository.findById(ObjectId(pony.id))` and `mapper.update(fromDb, pony)`

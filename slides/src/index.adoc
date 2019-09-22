@@ -24,7 +24,7 @@ include::slides/bases.adoc[]
 
 include::slides/list.adoc[]
 
-// include::slides/kotlinFun.adoc[]
+include::slides/kotlinFun.adoc[]
 
 include::slides/conclusion/index.adoc[]
 

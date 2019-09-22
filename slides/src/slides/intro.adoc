@@ -1,3 +1,26 @@
+
+== Git clone
+
+http://bit.do/talendkotlin
+
+image:qr.png[]
+
+== By JetBrains
+
+[fragment]#IntelliJ#
+
+[fragment]#PyCHarm#
+
+[fragment]#GoLand#
+
+[fragment]#ReSharper#
+
+[NOTE.speaker]
+--
+Jetbrains : tools for developpers
+--
+
+
 == Why Kotlin
 
 [fragment]#Java Interoperability#

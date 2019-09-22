@@ -1,8 +1,10 @@
 package bzh.zomzog.kotlinworkshop.service
 
 import bzh.zomzog.kotlinworkshop.domain.PonyType.Earth
+import bzh.zomzog.kotlinworkshop.domain.PonyType.Pegasi
 import bzh.zomzog.kotlinworkshop.repository.PonyRepository
 import bzh.zomzog.kotlinworkshop.repository.documents.PonyMongo
+import bzh.zomzog.kotlinworkshop.repository.documents.PonyMongoBuilder
 import io.mockk.every
 import io.mockk.mockk
 import org.assertj.core.api.Assertions.assertThat
