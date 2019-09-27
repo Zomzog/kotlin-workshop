@@ -1,9 +1,0 @@
-node_modules/
-build
-target
-.idea
-.idea/workspace.xml
-.travis.yml
-*.iws
-*.iml
-*.ipr

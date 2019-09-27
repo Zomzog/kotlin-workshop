@@ -2,6 +2,3 @@ image:https://travis-ci.org/Zomzog/kotlin-workshop.svg?branch=master["Build Stat
 
 == Kotlin workshop
 
-Source: /example
-
-Slide: /slides
