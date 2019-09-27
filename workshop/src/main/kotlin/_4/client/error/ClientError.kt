@@ -9,41 +9,30 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-// fun main() = threads()
-
-suspend fun main() = coroutines()
-
-private fun threads() {
+fun main() {
     try {
-        val threads = mutableListOf<Thread>()
-        repeat(20) {
-            val thread = Thread {
-                runBlocking {
-                    callFailEvery10()
-                }
-            }
-            thread.start()
-        }
-        threads.forEach { it.join() }
+        threads()
     } catch (e: Exception) {
         println("${e.message} ok wait for others ?")
         Thread.sleep(3000)
     }
 }
 
-private suspend fun coroutines() {
-    try {
-        coroutineScope {
-            repeat(20) {
-                launch {
-                    callFailEvery10()
-                }
+private fun threads() {
+    val threads = mutableListOf<Thread>()
+    repeat(20) {
+        val thread = Thread {
+            runBlocking {
+                callFailEvery10()
             }
         }
-    } catch (e: Exception) {
-        println("${e.message} ok wait for others ?")
-        delay(3000)
+        thread.start()
     }
+    threads.forEach { it.join() }
+}
+
+private suspend fun coroutines() {
+    TODO()
 }
 
 private suspend fun callFailEvery10() {

@@ -11,6 +11,5 @@ fun main() {
  * Example : sayHelloUpper(Talend) = "Hello TALEND"
  */
 fun sayHelloUpper(who: String) : String {
-    // TODO
-    return "Hello ${who.toUpperCase()}"
+    TODO()
 }

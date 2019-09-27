@@ -12,15 +12,10 @@ fun main() {
 
 // TODO input is a list of Integer as String, return the some of them
 fun sum(list: List<String>): Int {
-    // TODO
-    return list.map { it.toInt() }
-            .toIntArray()
-            .sum()
+    TODO()
 }
 
 // TODO find the first string equals to 10
 fun findFirst10(list: List<String>): Int {
-    return list.asSequence()
-            .map { it.toInt() }
-            .first{ it == 10 }
+    TODO()
 }

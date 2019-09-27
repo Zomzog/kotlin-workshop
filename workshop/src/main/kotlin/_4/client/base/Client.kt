@@ -20,14 +20,7 @@ private fun threads() {
 }
 
 private suspend fun coroutines() {
-    coroutineScope {
-        repeat(10000) {
-            launch {
-                callHello()
-            }
-            println("Hello")
-        }
-    }
+ TODO()
 }
 
 private fun callHello() {
