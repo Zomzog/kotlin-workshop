@@ -1,0 +1,11 @@
+include::class.adoc[]
+
+include::constructor.adoc[]
+
+include::properties.adoc[]
+
+include::data.adoc[]
+
+include::yourTurnClasses.adoc[]
+
+include::nammed.adoc[]

@@ -20,11 +20,19 @@ Kotlin workshop
 
 include::slides/intro.adoc[]
 
-include::slides/bases.adoc[]
+include::slides/bases/index.adoc[]
 
-include::slides/list.adoc[]
+include::slides/objects/index.adoc[]
 
-include::slides/kotlinFun.adoc[]
+include::slides/collections/index.adoc[]
+
+include::slides/extension/index.adoc[]
+
+include::slides/coroutine/index.adoc[]
+
+# include::slides/list.adoc[]
+
+# include::slides/kotlinFun.adoc[]
 
 include::slides/conclusion/index.adoc[]
 

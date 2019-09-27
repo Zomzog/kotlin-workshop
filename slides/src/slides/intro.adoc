@@ -23,6 +23,13 @@ Jetbrains : tools for developpers
 
 == Why Kotlin
 
+[fragment]#Easy to learn#
+
+[NOTE.speaker]
+--
+Specialy for java dev
+--
+
 [fragment]#Java Interoperability#
 
 [NOTE.speaker]

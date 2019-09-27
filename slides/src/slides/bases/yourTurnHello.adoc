@@ -1,0 +1,38 @@
+== Your turn
+
+Open `Helloworld.kt` and code sayHelloUpper
+
+== Review
+
+[source, kotlin]
+----
+fun sayHelloUpper(who: String) : String {
+    val upper = who.toUpperCase()
+    return "Hello " + upper
+}
+----
+
+== String template
+
+[source, kotlin]
+----
+fun sayHelloUpper(who: String) : String {
+    val upper = who.toUpperCase()
+    return "Hello $upper"
+}
+----
+
+== String template
+
+[source, kotlin]
+----
+fun sayHelloUpper(who: String) : String {
+
+    return "Hello ${who.toUpperCase()}"
+}
+----
+
+[NOTE.speaker]
+--
+surround with brace for calling complex
+--

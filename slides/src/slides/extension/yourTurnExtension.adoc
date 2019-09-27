@@ -1,0 +1,8 @@
+
+== Your turn
+
+Open `Extends.kt` and create an extension for
+
+* UntouchablePony.toCustomString()
+* String.toPony()  
+

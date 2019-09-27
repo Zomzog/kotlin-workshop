@@ -1,0 +1,24 @@
+
+== POKO
+
+[source, kotlin]
+----
+class Pony(val name: String) {
+    
+    override fun hashCode(): Int { ... }
+    override fun equals(other: Any?): Boolean { ... }
+    override fun toString(): String { ... }
+}
+----
+
+== Data class
+----
+data class Pony(val name: String)
+----
+
+
+[NOTE.speaker]
+--
+like
+Free equals, hashcode, toString but also copy 
+--

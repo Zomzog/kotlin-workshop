@@ -1,0 +1,88 @@
+== Variables
+
+[source, java]
+----
+String pony = "Pinkie";
+----
+
+[source, hideCode]
+----
+    .
+----
+
+== Variables
+
+[source, java]
+----
+String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+var 
+----
+
+== Variables
+
+[source, java]
+----
+String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+var pony
+----
+
+== Variables
+
+[source, java]
+----
+String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+var pony: String = "Pinkie"
+----
+
+== Variables
+
+[source, java]
+----
+String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+var pony = "Pinkie"
+----
+
+[NOTE.speaker]
+--
+type inferred
+--
+
+== Variables
+
+[source, java]
+----
+final String pony = "Pinkie";
+----
+
+[source, hideCode]
+----
+val pony = "Pinkie"
+----
+
+== Values
+
+[source, java]
+----
+final String pony = "Pinkie";
+----
+
+[source, kotlin]
+----
+val pony = "Pinkie"
+----

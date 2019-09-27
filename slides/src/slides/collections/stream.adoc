@@ -1,0 +1,60 @@
+== kotlin Stream ?
+
+[source, java]
+----
+Stream.of("val1", "val2", "val3")
+        .peek(it -> System.out.println(it))
+        .filter(it -> "val2".equals(it))
+        .findFirst();
+----
+
+Output : 
+[source, kotlin]
+----
+val1
+val2
+----
+
+== kotlin Stream ?
+[source, kotlin]
+----
+listOf("val1", "val2", "val3")
+    .onEach { println(it) }
+    .filter { "val2" == it }
+    .first()
+----
+
+Output : 
+[source, kotlin]
+----
+val1
+val2
+val3
+----
+
+[NOTE.speaker]
+--
+List are not lazy
+--
+
+== Stream ?
+
+[source, kotlin]
+----
+sequenceOf("val1", "val2", "val3")
+    .onEach { println(it) }
+    .filter { "val2" == it }
+    .first()
+----
+
+[source, kotlin]
+----
+listOf("val1", "val2", "val3").asSequence()
+setOf("val1", "val2", "val3").asSequence()
+arrayOf("val1", "val2", "val3").asSequence()
+----
+
+[NOTE.speaker]
+--
+Sequence are lazy
+--

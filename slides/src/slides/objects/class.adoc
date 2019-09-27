@@ -1,0 +1,54 @@
+== Class
+[source, hideCode]
+----
+.
+
+
+
+.
+----
+
+== Class
+[source, hideCode]
+----
+class Pony {
+
+
+
+}
+----
+
+
+== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+
+
+}
+----
+
+== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+      get() { return field }
+      set(value) { field = value }
+}
+----
+
+
+== Class
+
+[source, kotlin]
+----
+class Pony {
+    var name: String? = null
+
+    var friendsCount: Int = 1
+}
+----

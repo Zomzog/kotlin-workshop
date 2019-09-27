@@ -4,7 +4,6 @@ import bzh.zomzog.kotlinworkshop.repository.PonyRepository
 import io.mockk.every
 import io.mockk.mockk
 import org.assertj.core.api.Assertions.assertThat
-import org.bson.types.ObjectId
 import org.junit.jupiter.api.Test
 
 internal class PonyServiceFindAllTest {

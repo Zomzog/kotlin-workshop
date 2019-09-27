@@ -1,0 +1,157 @@
+
+== Null     
+
+[source, kotlin]
+----
+val nullable : String = null
+----
+
+[NOTE.speaker]
+--
+Do you try this? Compiler issue
+--
+
+== Null safty
+
+[source, kotlin]
+----
+val nullable : String? = null
+----
+
+== Null safty
+
+[source, kotlin]
+----
+nullable.toUpperCase() // KO
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+How do we access a nullable ?
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Like optional in java, 
+we know not null because tested
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Same thing but simplified
+--
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase() ?: ""
+----
+
+[source, hideCode]
+----
+.
+----
+
+[NOTE.speaker]
+--
+Elvis operator for else null
+--
+
+
+== Null safty
+
+[source, kotlin]
+----
+if (null != nullable) nullable.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase()
+----
+
+[source, kotlin]
+----
+nullable?.toUpperCase() ?: ""
+----
+
+[source, kotlin]
+----
+nullable!!.toUpperCase()
+----
+
+[NOTE.speaker]
+--
+From java but know it's not null?
+In any case we know it can be null and we make a choice
+--

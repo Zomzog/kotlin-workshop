@@ -25,8 +25,8 @@ class PonyService(private val ponyRepository: PonyRepository,
                     .map { mapper.update(it, pony) }
                     .orElseThrow { RuntimeException("Pony not found") } // TODO Named exception
         }
-        ponyRepository.save(updated)
-        return mapper.map(updated)
+        val result = ponyRepository.save(updated)
+        return mapper.map(result)
     }
 
     fun PonyMongo.toPony() = Pony(this.id.toString(), this.name, this.type, this.createdAt)

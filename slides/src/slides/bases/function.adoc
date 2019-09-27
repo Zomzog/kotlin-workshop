@@ -1,0 +1,76 @@
+
+== Functions first-class citizen
+
+[fragment]#stored in variables#
+
+[fragment]#stored in data structures#
+
+[fragment]#passed as arguments#
+
+[fragment]#returned from functions#
+
+[fragment]#don't need classes#
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun              {
+  
+}
+----
+
+[NOTE.speaker]
+--
+We start with fun
+
+--
+
+[transition=fade]
+== Top-level functions
+
+[source, kotlin]
+----
+fun main()       {
+  
+}
+----
+
+[NOTE.speaker]
+--
+Args are optionnal, println for system out println
+--
+
+[transition=fade]
+== Top-level functions
+
+[source, kotlin]
+----
+fun main(): Unit {
+  
+}
+----
+
+[NOTE.speaker]
+--
+Return type Unit like void in java
+
+It's optional to specify it for functions
+--
+
+
+== Top-level functions
+
+[source, kotlin]
+----
+fun main() : Unit {
+    println("hello world")
+}
+----
+
+[NOTE.speaker]
+--
+semicolon optionals
+
+Create your first kotlin hello world
+--

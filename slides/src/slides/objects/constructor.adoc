@@ -1,0 +1,73 @@
+== Constructor
+[source, kotlin]
+----
+class Pony {
+    var name: String
+    var friendsCount: Int
+
+
+
+
+
+}
+----
+
+== Constructor
+[source, kotlin]
+----
+class Pony {
+    var name: String
+    var friendsCount: Int
+
+    constructor(name: String, friendsCount: Int = 0){
+        this.name = name
+        this.friendsCount = friendsCount
+    }
+}
+----
+
+== Constructor
+
+[source, kotlin]
+----
+class Pony(name: String, friendsCount: Int = 0) {
+    var name: String = name
+    var friendsCount = friendsCount
+
+
+
+
+
+}
+----
+
+[NOTE.speaker]
+--
+friendsCount with default value see it later
+--
+== Constructor
+
+[source, kotlin]
+----
+class Pony(val name: String,
+           var friendsCount: Int = 0) {
+
+
+
+
+
+
+}
+----
+
+== Calling constructor
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+----
+
+[NOTE.speaker]
+--
+no need of new
+--

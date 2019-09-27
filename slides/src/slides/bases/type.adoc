@@ -1,0 +1,18 @@
+== Everything is object
+
+Int, Long, Double...
+
+[fragment]#But not at runtime#
+
+[NOTE.speaker]
+--
+Some of the types can have a special internal representation 
+- for example, numbers, characters and booleans can be represented as primitive values at runtime -
+ but to the user they look like ordinary classes
+--
+
+== Unit is the new Void
+
+Unit is an object
+
+Unit.toString()

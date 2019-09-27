@@ -1,0 +1,47 @@
+== Classic way
+[source, kotlin]
+----
+val list = listOf("val1", "val2")
+val first = list.get(0)
+val second = list.get(1)
+----
+
+== Functional way
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map({ it -> it.toUpperCase() })
+----
+
+[NOTE.speaker]
+--
+Direct call of functionnal without using a stream
+--
+
+== Lambda
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map({ it.toUpperCase() })
+----
+
+[NOTE.speaker]
+--
+Default lambda parameter is `it`
+--
+
+== Lambda
+
+[source, kotlin]
+----
+val first = listOf("val1", "val2")
+        .map { it.toUpperCase() }
+----
+
+[NOTE.speaker]
+--
+Kotlin convention if last parameter is a lambda it can be outside parentheses
+DSL ? 
+--

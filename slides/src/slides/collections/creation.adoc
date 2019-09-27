@@ -1,0 +1,136 @@
+== List
+
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+[NOTE.speaker]
+--
+
+--
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, hideCode]
+----
+ .
+----
+[source, hideCode]
+----
+ .
+----
+[NOTE.speaker]
+--
+
+--
+
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, kotlin]
+----
+var twoVal  = listOf("val1", "val2")
+----
+[source, hideCode]
+----
+.
+----
+[NOTE.speaker]
+--
+They are immutable
+--
+
+== List
+
+[source, kotlin]
+----
+var empty   = emptyList<String>()
+----
+[source, kotlin]
+----
+var twoVal  = listOf("val1", "val2")
+----
+[source, kotlin]
+----
+var mutable = mutableListOf("val1", "val2")
+----
+[NOTE.speaker]
+--
+
+--
+
+== Set
+
+[source, kotlin]
+----
+var empty   = emptySet<String>()
+----
+[source, kotlin]
+----
+var twoVal  = setOf("val1", "val2")
+----
+[source, kotlin]
+----
+var mutable = mutableSetOf("val1", "val2")
+----
+[NOTE.speaker]
+--
+
+--
+
+== Set
+
+[source, kotlin]
+----
+var empty   = emptyMap<String, String>()
+----
+[source, kotlin]
+----
+var twoVal  = mapOf("key" to "val")
+----
+[source, kotlin]
+----
+var mutable = mutableMapOf("key" to "val")
+----
+[NOTE.speaker]
+--
+--
+
+== Range
+[source, kotlin]
+----
+for (i in 1..4) print(i)
+----
+[source, kotlin]
+----
+for (i in 4 downTo 1) print(i)
+----
+[source, kotlin]
+----
+for (i in 1..8 step 2) print(i)
+----
+
+
+== Specialized
+
+[fragment]#IntRange#
+
+[fragment]#IntArray#
+
+[fragment]#BooleanArray#
+
+[fragment]#....#

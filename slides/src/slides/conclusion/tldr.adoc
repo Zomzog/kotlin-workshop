@@ -1,3 +1,23 @@
 == TL;DR
 
+Pragmatic : take the best of others (Java, C#, Groovy)
+
+~30% less line of code
+
+Java to Kotlin Intellij
+
+Coroutines
+
+Integration by 
+SpringBoot
+Junit
+Gradle
+
+Kotlin native
+
+Kotlin universe 
+Ktor
+mockk
+assertk
+Kodein (DI)
 

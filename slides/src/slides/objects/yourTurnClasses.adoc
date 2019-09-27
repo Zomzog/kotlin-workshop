@@ -1,0 +1,28 @@
+
+== Your turn
+
+Open `Classes.kt` and remove `Workshop.java` and create Kotlin equivalent
+
+== Simplify With
+
+`with` is a non-extension function that can access members of its argument concisely
+
+
+[NOTE.speaker]
+--
+with(workshop) {
+    return "Hello to $attendeesCount attendees of $name workshop"
+}
+--
+
+== Destructuring
+
+Data class allow destructuring calls
+
+[NOTE.speaker]
+--
+fun helloWorkshop(workshop: Workshop): String {
+    val (name, count) = workshop;
+    return "Hello to $attendeesCount attendees of $name workshop"
+}
+--

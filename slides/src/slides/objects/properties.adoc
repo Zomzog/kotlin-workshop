@@ -1,0 +1,55 @@
+== Properties access
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+----
+
+[source, hideCode]
+----
+.
+----
+
+[source, hideCode]
+----
+.
+----
+
+== Properties access
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+----
+
+[source, kotlin]
+----
+val name = pony.name // GET
+----
+
+[source, hideCode]
+----
+.
+----
+
+== Properties access
+
+[source, kotlin]
+----
+val pony = Pony("Rainbow", 3)
+----
+
+[source, kotlin]
+----
+val name = pony.name // GET
+----
+
+[source, kotlin]
+----
+pony.friendCount = 5 // SET
+----
+
+[NOTE.speaker]
+--
+useless but example of get and set
+--

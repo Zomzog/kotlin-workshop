@@ -7,7 +7,7 @@ const $ = require('gulp-load-plugins')();
 const convertToHtml = require('./convert-to-html');
 
 gulp.task('convert', () =>
-  gulp.src('src/**/*.adoc')
+  gulp.src('src/index.adoc')
     .pipe(convertToHtml())
 );
 

@@ -1,0 +1,22 @@
+== Project structure
+
+[fragment]#Gradle build with Kotlin DSL#
+
+[fragment]#Separated kotlin/java#
+
+[NOTE.speaker]
+--
+Just a first example of what can be done with Kotlin
+
+Separated for easiest management but can be mixed
+--
+
+include::variables.adoc[]
+
+include::type.adoc[]
+
+include::nullsafty.adoc[]
+
+include::function.adoc[]
+
+include::yourTurnHello.adoc[]
