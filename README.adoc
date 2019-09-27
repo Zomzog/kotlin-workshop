@@ -2,3 +2,9 @@ image:https://travis-ci.org/Zomzog/kotlin-workshop.svg?branch=master["Build Stat
 
 == Kotlin workshop
 
+Requirement :
+
+* Jdk 8
+* IntelliJ
+
+Import /workshop as Gradle project with gradle wrapper option.
