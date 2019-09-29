@@ -6,5 +6,6 @@ Requirement :
 
 * Jdk 8
 * IntelliJ
+* Clone the repository
 
 Import /workshop as Gradle project with gradle wrapper option.

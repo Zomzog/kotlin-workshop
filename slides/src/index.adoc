@@ -11,6 +11,7 @@
 [%notitle]
 [.title]
 == Title
+image::background.jpg[background, size=cover]
 Kotlin workshop
 
 [NOTE.speaker]

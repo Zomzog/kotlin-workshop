@@ -1,6 +1,6 @@
 == Everything is object
 
-Int, Long, Double...
+[fragment]#Int, Long, Double...#
 
 [fragment]#But not at runtime#
 
@@ -15,4 +15,4 @@ Some of the types can have a special internal representation
 
 Unit is an object
 
-Unit.toString()
+[fragment]#Unit.toString()#
