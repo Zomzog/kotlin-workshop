@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Title</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="node_modules/reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="css/zomzog.css" id="theme"><link href="node_modules/reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "node_modules/reveal.js/css/print/pdf.css" : "node_modules/reveal.js/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--><link rel="stylesheet" href="css/custom.css"></head><body><div class="reveal"><div class="slides"><section id="title" class="title" data-transition="fade" data-background-image="images/background.jpg" data-background-size="cover" data-background-transition="fade">
+<div class="paragraph"><p>Kotlin workshop</p></div>
+<aside class="notes"></aside></section>
+<section id="git_clone" data-transition="fade"><h2>Git clone</h2><div class="paragraph"><p><a href="http://bit.do/talendkotlin" class="bare">http://bit.do/talendkotlin</a></p></div>
+<div class="paragraph"><p><span class="image"><img src="images/qr.png" alt="qr"></span></p></div></section>
+<section id="by_jetbrains" data-transition="fade"><h2>By JetBrains</h2><div class="paragraph"><p><span class="fragment">IntelliJ</span></p></div>
+<div class="paragraph"><p><span class="fragment">PyCHarm</span></p></div>
+<div class="paragraph"><p><span class="fragment">GoLand</span></p></div>
+<div class="paragraph"><p><span class="fragment">ReSharper</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Jetbrains : tools for developpers</p></div></aside></section>
+<section id="why_kotlin" data-transition="fade"><h2>Why Kotlin</h2><div class="paragraph"><p><span class="fragment">Easy to learn</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Specialy for java dev</p></div></aside>
+<div class="paragraph"><p><span class="fragment">Java Interoperability</span></p></div>
+<aside class="notes"><div class="paragraph"><p>the new language is going to be introduced gradually,
+and needs to interoperate smoothly with the existing code base</p></div></aside>
+<div class="paragraph"><p><span class="fragment">Compilation speed</span></p></div>
+<aside class="notes"><div class="paragraph"><p>long enough to compile with javac,
+and we cannot afford making it any slower</p></div></aside>
+<div class="paragraph"><p><span class="fragment">Visibility</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Jetbrain is more than just an IDE</p></div></aside></section>
+<section id="project_structure" data-transition="fade"><h2>Project structure</h2><div class="paragraph"><p><span class="fragment">Gradle build with Kotlin DSL</span></p></div>
+<div class="paragraph"><p><span class="fragment">Separated kotlin/java</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Just a first example of what can be done with Kotlin</p></div>
+<div class="paragraph"><p>Separated for easiest management but can be mixed</p></div></aside></section>
+<section id="variables" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">    .</code></pre></div></div></section>
+<section id="variables_2" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var</code></pre></div></div></section>
+<section id="variables_3" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var pony</code></pre></div></div></section>
+<section id="variables_4" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var pony: String = "Pinkie"</code></pre></div></div></section>
+<section id="variables_5" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var pony = "Pinkie"</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>type inferred</p></div></aside></section>
+<section id="variables_6" data-transition="fade"><h2>Variables</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">final String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">val pony = "Pinkie"</code></pre></div></div></section>
+<section id="values" data-transition="fade"><h2>Values</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">final String pony = "Pinkie";</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val pony = "Pinkie"</code></pre></div></div></section>
+<section id="everything_is_object" data-transition="fade"><h2>Everything is object</h2><div class="paragraph"><p><span class="fragment">Int, Long, Double&#8230;&#8203;</span></p></div>
+<div class="paragraph"><p><span class="fragment">But not at runtime</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Some of the types can have a special internal representation
+- for example, numbers, characters and booleans can be represented as primitive values at runtime -
+ but to the user they look like ordinary classes</p></div></aside></section>
+<section id="unit_is_the_new_void" data-transition="fade"><h2>Unit is the new Void</h2><div class="paragraph"><p>Unit is an object</p></div>
+<div class="paragraph"><p><span class="fragment">Unit.toString()</span></p></div></section>
+<section id="null" data-transition="fade"><h2>Null</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val nullable : String = null</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Do you try this? Compiler issue</p></div></aside></section>
+<section id="null_safty" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val nullable : String? = null</code></pre></div></div></section>
+<section id="null_safty_2" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable.toUpperCase() // KO</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>How do we access a nullable ?</p></div></aside></section>
+<section id="null_safty_3" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">if (null != nullable) nullable.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Like optional in java,
+we know not null because tested</p></div></aside></section>
+<section id="null_safty_4" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">if (null != nullable) nullable.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable?.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Same thing but simplified</p></div></aside></section>
+<section id="null_safty_5" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">if (null != nullable) nullable.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable?.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable?.toUpperCase() ?: ""</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Elvis operator for else null</p></div></aside></section>
+<section id="null_safty_6" data-transition="fade"><h2>Null safty</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">if (null != nullable) nullable.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable?.toUpperCase()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable?.toUpperCase() ?: ""</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">nullable!!.toUpperCase()</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>From java but know it&#8217;s not null?
+In any case we know it can be null and we make a choice</p></div></aside></section>
+<section id="functions_first_class_citizen" data-transition="fade"><h2>Functions first-class citizen</h2><div class="paragraph"><p><span class="fragment">stored in variables</span></p></div>
+<div class="paragraph"><p><span class="fragment">stored in data structures</span></p></div>
+<div class="paragraph"><p><span class="fragment">passed as arguments</span></p></div>
+<div class="paragraph"><p><span class="fragment">returned from functions</span></p></div>
+<div class="paragraph"><p><span class="fragment">don&#8217;t need classes</span></p></div></section>
+<section id="top_level_functions" data-transition="fade"><h2>Top-level functions</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun              {
+
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>We start with fun</p></div></aside></section>
+<section id="top_level_functions_2" data-transition="fade"><h2>Top-level functions</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun main()       {
+
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Args are optionnal, println for system out println</p></div></aside></section>
+<section id="top_level_functions_3" data-transition="fade"><h2>Top-level functions</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun main(): Unit {
+
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Return type Unit like void in java</p></div>
+<div class="paragraph"><p>It&#8217;s optional to specify it for functions</p></div></aside></section>
+<section id="top_level_functions_4" data-transition="fade"><h2>Top-level functions</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun main() : Unit {
+    println("hello world")
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>semicolon optionals</p></div>
+<div class="paragraph"><p>Create your first kotlin hello world</p></div></aside></section>
+<section id="your_turn" data-transition="fade"><h2>Your turn</h2><div class="paragraph"><p>Open <code>Helloworld.kt</code></p></div>
+<div class="paragraph"><p>code sayHelloUpper</p></div></section>
+<section id="review" data-transition="fade"><h2>Review</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun sayHelloUpper(who: String) : String {
+    val upper = who.toUpperCase()
+    return "Hello " + upper
+}</code></pre></div></div></section>
+<section id="string_template" data-transition="fade"><h2>String template</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun sayHelloUpper(who: String) : String {
+    val upper = who.toUpperCase()
+    return "Hello $upper"
+}</code></pre></div></div></section>
+<section id="string_template_2" data-transition="fade"><h2>String template</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun sayHelloUpper(who: String) : String {
+
+    return "Hello ${who.toUpperCase()}"
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>surround with brace for calling complex</p></div></aside></section>
+<section id="class" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.
+
+
+
+.</code></pre></div></div></section>
+<section id="class_2" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">class Pony {
+
+
+
+}</code></pre></div></div></section>
+<section id="class_3" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
+    var name: String? = null
+
+
+}</code></pre></div></div></section>
+<section id="class_4" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
+    var name: String? = null
+      get() { return field }
+      set(value) { field = value }
+}</code></pre></div></div></section>
+<section id="class_5" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
+    var name: String? = null
+
+    var friendsCount: Int = 1
+}</code></pre></div></div></section>
+<section id="constructor" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
+    var name: String
+    var friendsCount: Int
+
+
+
+
+
+}</code></pre></div></div></section>
+<section id="constructor_2" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
+    var name: String
+    var friendsCount: Int
+
+    constructor(name: String, friendsCount: Int = 0){
+        this.name = name
+        this.friendsCount = friendsCount
+    }
+}</code></pre></div></div></section>
+<section id="constructor_3" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony(name: String, friendsCount: Int = 0) {
+    var name: String = name
+    var friendsCount = friendsCount
+
+
+
+
+
+}</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>friendsCount with default value see it later</p></div></aside></section>
+<section id="constructor_4" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony(val name: String,
+           var friendsCount: Int = 0) {
+
+
+
+
+
+
+}</code></pre></div></div></section>
+<section id="calling_constructor" data-transition="fade"><h2>Calling constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val pony = Pony("Rainbow", 3)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>no need of new</p></div></aside></section>
+<section id="properties_access" data-transition="fade"><h2>Properties access</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val pony = Pony("Rainbow", 3)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div></section>
+<section id="properties_access_2" data-transition="fade"><h2>Properties access</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val pony = Pony("Rainbow", 3)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val name = pony.name // GET</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div></section>
+<section id="properties_access_3" data-transition="fade"><h2>Properties access</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val pony = Pony("Rainbow", 3)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val name = pony.name // GET</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">pony.friendCount = 5 // SET</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>useless but example of get and set</p></div></aside></section>
+<section id="poko" data-transition="fade"><h2>POKO</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony(val name: String) {
+
+    override fun hashCode(): Int { ... }
+    override fun equals(other: Any?): Boolean { ... }
+    override fun toString(): String { ... }
+}</code></pre></div></div></section>
+<section id="data_class" data-transition="fade"><h2>Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape>data class Pony(val name: String)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>like
+Free equals, hashcode, toString but also copy</p></div></aside></section>
+<section id="your_turn_2" data-transition="fade"><h2>Your turn</h2><div class="paragraph"><p>Open <code>Classes.kt</code> and remove <code>Workshop.java</code> and create Kotlin equivalent</p></div></section>
+<section id="simplify_with" data-transition="fade"><h2>Simplify With</h2><div class="paragraph"><p><code>with</code> is a non-extension function that can access members of its argument concisely</p></div>
+<aside class="notes"><div class="paragraph"><p>with(workshop) {
+    return "Hello to $attendeesCount attendees of $name workshop"
+}</p></div></aside></section>
+<section id="destructuring" data-transition="fade"><h2>Destructuring</h2><div class="paragraph"><p>Data class allow destructuring calls</p></div>
+<aside class="notes"><div class="paragraph"><p>fun helloWorkshop(workshop: Workshop): String {
+    val (name, count) = workshop;
+    return "Hello to $attendeesCount attendees of $name workshop"
+}</p></div></aside></section>
+<section id="named_parameters" data-transition="fade"><h2>Named parameters</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">data class Pony(
+    val id: String? = null,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime? = null
+)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val mlp = Pony(null, "name", Pegasi, null)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>In this constructor 2 parameters has default values</p></div></aside></section>
+<section id="named_parameters_2" data-transition="fade"><h2>Named parameters</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">data class Pony(
+    val id: String? = null,
+    val name: String,
+    val type: PonyType,
+    val createdAt: LocalDateTime? = null
+)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val mlp = Pony(name="name", type = Pegasi)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Multiple constructor with default values can be simplified to one</p></div></aside></section>
+<section id="copy_data_class" data-transition="fade"><h2>Copy Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun copy(name: String = this.name, type: PonyType = this.type) = Pony(name, type)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>It&#8217;s often the case that we need to copy an object altering some of its properties,</p></div></aside></section>
+<section id="copy_data_class_2" data-transition="fade"><h2>Copy Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val newOne = oldOne.copy(name="Pinkie")</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>It&#8217;s offerd by data class and named parameters</p></div></aside></section>
+<section id="list" data-transition="fade"><h2>List</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"></aside></section>
+<section id="list_2" data-transition="fade"><h2>List</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var empty   = emptyList&lt;String&gt;()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode"> .</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode"> .</code></pre></div></div>
+<aside class="notes"></aside></section>
+<section id="list_3" data-transition="fade"><h2>List</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var empty   = emptyList&lt;String&gt;()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var twoVal  = listOf("val1", "val2")</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>They are immutable</p></div></aside></section>
+<section id="list_4" data-transition="fade"><h2>List</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var empty   = emptyList&lt;String&gt;()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var twoVal  = listOf("val1", "val2")</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var mutable = mutableListOf("val1", "val2")</code></pre></div></div>
+<aside class="notes"></aside></section>
+<section id="set" data-transition="fade"><h2>Set</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var empty   = emptySet&lt;String&gt;()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var twoVal  = setOf("val1", "val2")</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var mutable = mutableSetOf("val1", "val2")</code></pre></div></div>
+<aside class="notes"></aside></section>
+<section id="set_2" data-transition="fade"><h2>Set</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var empty   = emptyMap&lt;String, String&gt;()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var twoVal  = mapOf("key" to "val")</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var mutable = mutableMapOf("key" to "val")</code></pre></div></div>
+<aside class="notes"></aside></section>
+<section id="range" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..4) print(i)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 4 downTo 1) print(i)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..8 step 2) print(i)</code></pre></div></div></section>
+<section id="specialized" data-transition="fade"><h2>Specialized</h2><div class="paragraph"><p><span class="fragment">IntRange</span></p></div>
+<div class="paragraph"><p><span class="fragment">IntArray</span></p></div>
+<div class="paragraph"><p><span class="fragment">BooleanArray</span></p></div>
+<div class="paragraph"><p><span class="fragment">&#8230;&#8203;.</span></p></div></section>
+<section id="classic_way" data-transition="fade"><h2>Classic way</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val list = listOf("val1", "val2")
+val first = list.get(0)
+val second = list.get(1)</code></pre></div></div></section>
+<section id="functional_way" data-transition="fade"><h2>Functional way</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val first = listOf("val1", "val2")
+        .map({ it -&gt; it.toUpperCase() })</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Direct call of functionnal without using a stream</p></div></aside></section>
+<section id="lambda" data-transition="fade"><h2>Lambda</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val first = listOf("val1", "val2")
+        .map({ it.toUpperCase() })</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Default lambda parameter is <code>it</code></p></div></aside></section>
+<section id="lambda_2" data-transition="fade"><h2>Lambda</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val first = listOf("val1", "val2")
+        .map { it.toUpperCase() }</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Kotlin convention if last parameter is a lambda it can be outside parentheses
+DSL ?</p></div></aside></section>
+<section id="kotlin_stream" data-transition="fade"><h2>kotlin Stream ?</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">Stream.of("val1", "val2", "val3")
+        .peek(it -&gt; System.out.println(it))
+        .filter(it -&gt; "val2".equals(it))
+        .findFirst();</code></pre></div></div>
+<div class="paragraph"><p>Output :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val1
+val2</code></pre></div></div></section>
+<section id="kotlin_stream_2" data-transition="fade"><h2>kotlin Stream ?</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">listOf("val1", "val2", "val3")
+    .onEach { println(it) }
+    .filter { "val2" == it }
+    .first()</code></pre></div></div>
+<div class="paragraph"><p>Output :</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val1
+val2
+val3</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>List are not lazy</p></div></aside></section>
+<section id="stream" data-transition="fade"><h2>Stream ?</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">sequenceOf("val1", "val2", "val3")
+    .onEach { println(it) }
+    .filter { "val2" == it }
+    .first()</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">listOf("val1", "val2", "val3").asSequence()
+setOf("val1", "val2", "val3").asSequence()
+arrayOf("val1", "val2", "val3").asSequence()</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Sequence are lazy</p></div></aside></section>
+<section id="your_turn_3" data-transition="fade"><h2>Your turn</h2><div class="paragraph"><p>Open <code>Collection.kt</code> and implements methods</p></div></section>
+<section id="coroutines" data-transition="fade"><h2>Coroutines</h2><div class="paragraph"><p><span class="image"><img src="images/coroutine.gif" alt="canvas"></span></p></div>
+<aside class="notes"><div class="paragraph"><p>Optimisation of thread usage</p></div></aside></section>
+<section id="callback_hell" data-transition="fade"><h2>Callback hell</h2><div class="paragraph"><p><span class="image"><img src="images/callbackhell.gif" alt="callbackhell"></span></p></div></section>
+<section id="includeslideslist_adoc" data-transition="fade"><h2>include::slides/list.adoc[]</h2></section>
+<section id="includeslideskotlinfun_adoc" data-transition="fade"><h2>include::slides/kotlinFun.adoc[]</h2><section id="tldr" data-transition="fade"><h2>TL;DR</h2><div class="paragraph"><p>Pragmatic : take the best of others (Java, C#, Groovy)</p></div>
+<div class="paragraph"><p>~30% less line of code</p></div>
+<div class="paragraph"><p>Java to Kotlin Intellij</p></div>
+<div class="paragraph"><p>Coroutines</p></div>
+<div class="paragraph"><p>Integration by
+SpringBoot
+Junit
+Gradle</p></div>
+<div class="paragraph"><p>Kotlin native</p></div>
+<div class="paragraph"><p>Kotlin universe
+Ktor
+mockk
+assertk
+Kodein (DI)</p></div></section>
+<section id="questions" data-transition="fade" data-background-image="images/questions.png" data-background-size="contain" data-background-transition="fade"><h2>Questions</h2></section>
+<section id="thanks" class="title" data-transition="fade"><div class="paragraph"><p>Thanks !</p></div></section></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'league',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
+  ]
+});</script><script src="js/custom.js"></script></html>
