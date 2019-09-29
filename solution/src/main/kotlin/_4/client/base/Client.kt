@@ -9,9 +9,9 @@ import com.github.kittinunf.result.Result;
 import kotlinx.coroutines.runBlocking
 import java.lang.Exception
 
-//fun main() = threads()
+fun main() = threads()
 
- suspend fun main() = coroutines()
+// suspend fun main() = coroutines()
 
 private fun threads() {
     repeat(1000) {

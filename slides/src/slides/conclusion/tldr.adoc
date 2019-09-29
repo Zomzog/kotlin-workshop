@@ -1,23 +1,44 @@
 == TL;DR
 
-Pragmatic : take the best of others (Java, C#, Groovy)
+Pragmatic: take the best of others (Java, C#, Groovy...)
 
-~30% less line of code
+[fragment]#~30% less line of code#
 
-Java to Kotlin Intellij
+[fragment]#Java Interoperability by design#
 
-Coroutines
+[fragment]#Coroutines#
 
-Integration by 
-SpringBoot
-Junit
-Gradle
+== Not seen
+
+Most of the langage
+
+[NOTE.speaker]
+--
+Smart Casts, when, object, Operator overloading..
+--
 
 Kotlin native
 
-Kotlin universe 
-Ktor
-mockk
-assertk
-Kodein (DI)
+Kotlin Multiplatform
 
+Java to Kotlin IntelliJ
+
+== Not seen
+
+Integration by : 
+
+[fragment]#Gradle#
+
+[fragment]#SpringBoot#
+
+[fragment]#Junit#
+
+== Kotlin universe
+
+[fragment]#Ktor#
+
+[fragment]#mockk#
+
+[fragment]#assertk#
+
+[fragment]#Kodein (DI)#

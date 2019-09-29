@@ -45,7 +45,8 @@ Multiple constructor with default values can be simplified to one
 
 [source, kotlin]
 ----
-fun copy(name: String = this.name, type: PonyType = this.type) = Pony(name, type)
+fun copy(name: String = this.name, 
+         type: PonyType = this.type) = Pony(name, type)
 ----
 
 [NOTE.speaker]

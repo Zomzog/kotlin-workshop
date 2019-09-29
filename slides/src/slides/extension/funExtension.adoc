@@ -1,0 +1,39 @@
+== Extension function
+
+[source, kotlin]
+----
+val mongoObject = ponyMapper.map(pony)
+----
+
+[NOTE.speaker]
+--
+Currently we have external mapper
+Don't want to pollute Pony class
+--
+
+== Extension function
+
+[source, kotlin]
+----
+val mongoObject = pony.toNewPonyMongo()
+----
+
+[NOTE.speaker]
+--
+Currently we have external mapper
+Don't want to pollute Pony class
+--
+== Extension function
+
+[source, kotlin]
+----
+fun Pony.toNewPonyMongo() = PonyMongo(this.id,...)
+----
+
+[NOTE.speaker]
+--
+This is resolved as this of Pony
+No code is added to Pony class
+Do not override existing functions
+--
+

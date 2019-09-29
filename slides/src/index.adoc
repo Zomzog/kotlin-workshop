@@ -31,9 +31,5 @@ include::slides/extension/index.adoc[]
 
 include::slides/coroutine/index.adoc[]
 
-# include::slides/list.adoc[]
-
-# include::slides/kotlinFun.adoc[]
-
 include::slides/conclusion/index.adoc[]
 

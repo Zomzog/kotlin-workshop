@@ -9,7 +9,7 @@
 ----
 
 == Class
-[source, hideCode]
+[source, kotlin]
 ----
 class Pony {
 
