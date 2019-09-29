@@ -121,7 +121,7 @@ In any case we know it can be null and we make a choice</p></div></aside></secti
 
 
 .</code></pre></div></div></section>
-<section id="class_2" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">class Pony {
+<section id="class_2" data-transition="fade"><h2>Class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
 
 
 
@@ -225,7 +225,8 @@ Free equals, hashcode, toString but also copy</p></div></aside></section>
 )</code></pre></div></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val mlp = Pony(name="name", type = Pegasi)</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>Multiple constructor with default values can be simplified to one</p></div></aside></section>
-<section id="copy_data_class" data-transition="fade"><h2>Copy Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun copy(name: String = this.name, type: PonyType = this.type) = Pony(name, type)</code></pre></div></div>
+<section id="copy_data_class" data-transition="fade"><h2>Copy Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun copy(name: String = this.name,
+         type: PonyType = this.type) = Pony(name, type)</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>It&#8217;s often the case that we need to copy an object altering some of its properties,</p></div></aside></section>
 <section id="copy_data_class_2" data-transition="fade"><h2>Copy Data class</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val newOne = oldOne.copy(name="Pinkie")</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>It&#8217;s offerd by data class and named parameters</p></div></aside></section>
@@ -298,26 +299,38 @@ setOf("val1", "val2", "val3").asSequence()
 arrayOf("val1", "val2", "val3").asSequence()</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>Sequence are lazy</p></div></aside></section>
 <section id="your_turn_3" data-transition="fade"><h2>Your turn</h2><div class="paragraph"><p>Open <code>Collection.kt</code> and implements methods</p></div></section>
+<section id="extension_function" data-transition="fade"><h2>Extension function</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val mongoObject = ponyMapper.map(pony)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Currently we have external mapper
+Don&#8217;t want to pollute Pony class</p></div></aside></section>
+<section id="extension_function_2" data-transition="fade"><h2>Extension function</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val mongoObject = pony.toNewPonyMongo()</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Currently we have external mapper
+Don&#8217;t want to pollute Pony class</p></div></aside></section>
+<section id="extension_function_3" data-transition="fade"><h2>Extension function</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">fun Pony.toNewPonyMongo() = PonyMongo(this.id,...)</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>This is resolved as this of Pony
+No code is added to Pony class
+Do not override existing functions</p></div></aside></section>
 <section id="coroutines" data-transition="fade"><h2>Coroutines</h2><div class="paragraph"><p><span class="image"><img src="images/coroutine.gif" alt="canvas"></span></p></div>
 <aside class="notes"><div class="paragraph"><p>Optimisation of thread usage</p></div></aside></section>
 <section id="callback_hell" data-transition="fade"><h2>Callback hell</h2><div class="paragraph"><p><span class="image"><img src="images/callbackhell.gif" alt="callbackhell"></span></p></div></section>
-<section id="includeslideslist_adoc" data-transition="fade"><h2>include::slides/list.adoc[]</h2></section>
-<section id="includeslideskotlinfun_adoc" data-transition="fade"><h2>include::slides/kotlinFun.adoc[]</h2><section id="tldr" data-transition="fade"><h2>TL;DR</h2><div class="paragraph"><p>Pragmatic : take the best of others (Java, C#, Groovy)</p></div>
-<div class="paragraph"><p>~30% less line of code</p></div>
-<div class="paragraph"><p>Java to Kotlin Intellij</p></div>
-<div class="paragraph"><p>Coroutines</p></div>
-<div class="paragraph"><p>Integration by
-SpringBoot
-Junit
-Gradle</p></div>
+<section id="tldr" data-transition="fade"><h2>TL;DR</h2><div class="paragraph"><p>Pragmatic: take the best of others (Java, C#, Groovy&#8230;&#8203;)</p></div>
+<div class="paragraph"><p><span class="fragment">~30% less line of code</span></p></div>
+<div class="paragraph"><p><span class="fragment">Java Interoperability by design</span></p></div>
+<div class="paragraph"><p><span class="fragment">Coroutines</span></p></div></section>
+<section id="not_seen" data-transition="fade"><h2>Not seen</h2><div class="paragraph"><p>Most of the langage</p></div>
+<aside class="notes"><div class="paragraph"><p>Smart Casts, when, object, Operator overloading..</p></div></aside>
 <div class="paragraph"><p>Kotlin native</p></div>
-<div class="paragraph"><p>Kotlin universe
-Ktor
-mockk
-assertk
-Kodein (DI)</p></div></section>
+<div class="paragraph"><p>Kotlin Multiplatform</p></div>
+<div class="paragraph"><p>Java to Kotlin IntelliJ</p></div></section>
+<section id="not_seen_2" data-transition="fade"><h2>Not seen</h2><div class="paragraph"><p>Integration by :</p></div>
+<div class="paragraph"><p><span class="fragment">Gradle</span></p></div>
+<div class="paragraph"><p><span class="fragment">SpringBoot</span></p></div>
+<div class="paragraph"><p><span class="fragment">Junit</span></p></div></section>
+<section id="kotlin_universe" data-transition="fade"><h2>Kotlin universe</h2><div class="paragraph"><p><span class="fragment">Ktor</span></p></div>
+<div class="paragraph"><p><span class="fragment">mockk</span></p></div>
+<div class="paragraph"><p><span class="fragment">assertk</span></p></div>
+<div class="paragraph"><p><span class="fragment">Kodein (DI)</span></p></div></section>
 <section id="questions" data-transition="fade" data-background-image="images/questions.png" data-background-size="contain" data-background-transition="fade"><h2>Questions</h2></section>
-<section id="thanks" class="title" data-transition="fade"><div class="paragraph"><p>Thanks !</p></div></section></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<section id="thanks" class="title" data-transition="fade"><div class="paragraph"><p>Thanks !</p></div></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,
