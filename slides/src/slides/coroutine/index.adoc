@@ -1,0 +1,13 @@
+== Coroutines
+
+image:coroutine.gif[canvas,size=contain]
+
+
+[NOTE.speaker]
+--
+Optimisation of thread usage
+--
+
+== Callback hell
+
+image:callbackhell.gif[]

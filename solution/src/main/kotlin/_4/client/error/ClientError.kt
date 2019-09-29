@@ -9,9 +9,15 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-// fun main() = threads()
 
-suspend fun main() = coroutines()
+fun main() {
+    try {
+        threads()
+    } catch (e: Exception) {
+        println("${e.message} ok wait for others ?")
+        Thread.sleep(3000)
+    }
+}
 
 private fun threads() {
     try {

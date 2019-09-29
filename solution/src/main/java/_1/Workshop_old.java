@@ -39,7 +39,7 @@ public class Workshop_old {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Workshop workshop = (Workshop) o;
+        Workshop_old workshop = (Workshop_old) o;
         return Objects.equals(name, workshop.name) &&
                 Objects.equals(attendeesCount, workshop.attendeesCount);
     }

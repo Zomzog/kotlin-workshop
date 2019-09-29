@@ -1,6 +1,8 @@
 == Your turn
 
-Open `Helloworld.kt` and code sayHelloUpper
+Open `Helloworld.kt` 
+
+code sayHelloUpper
 
 == Review
 
