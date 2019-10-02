@@ -6,8 +6,65 @@ image:coroutine.gif[canvas,size=contain]
 [NOTE.speaker]
 --
 Optimisation of thread usage
+
+ComplatableFutre, RxJava, async/await Js
 --
 
 == Callback hell
 
 image:callbackhell.gif[]
+
+== Coroutines
+
+[source, kotlin]
+----
+        fun doSomthing() {
+    val call1 = asyncCall1()
+    asyncCall2(call1)
+}
+----
+
+== Coroutines
+
+[source, kotlin]
+----
+suspend fun doSomthing() {
+    val call1 = asyncCall1()
+    asyncCall2(call1)
+}
+----
+
+== Start
+
+[source, kotlin]
+----
+suspend fun start() {
+    coroutineScope {
+
+
+
+    }
+}
+----
+
+[source, kotlin]
+----
+suspend fun start() {
+    coroutineScope {
+        launch {
+          
+        }
+    }
+}
+----
+
+[source, kotlin]
+----
+suspend fun start() {
+    coroutineScope {
+        launch {
+            doSomthing()
+        }
+    }
+}
+----

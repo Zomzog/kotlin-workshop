@@ -2,26 +2,28 @@
 
 Pragmatic: take the best of others (Java, C#, Groovy...)
 
+[fragment]#Null safety#
+
+[fragment]#Coroutines#
+
 [fragment]#~30% less line of code#
 
 [fragment]#Java Interoperability by design#
 
-[fragment]#Coroutines#
-
 == Not seen
 
-Most of the langage
+[fragment]#Most of the langage#
 
 [NOTE.speaker]
 --
 Smart Casts, when, object, Operator overloading..
 --
 
-Kotlin native
+[fragment]#Kotlin native#
 
-Kotlin Multiplatform
+[fragment]#Kotlin Multiplatform#
 
-Java to Kotlin IntelliJ
+[fragment]#Java to Kotlin IntelliJ#
 
 == Not seen
 

@@ -1,4 +1,4 @@
-== Classic way
+== Java way
 [source, kotlin]
 ----
 val list = listOf("val1", "val2")
@@ -6,11 +6,26 @@ val first = list.get(0)
 val second = list.get(1)
 ----
 
+== Kotlin way
+[source, kotlin]
+----
+val list = listOf("val1", "val2")
+val first = list[0]
+val second = list[1]
+----
+
+== Destructuring way
+[source, kotlin]
+----
+val list = listOf("val1", "val2")
+val (first, second) = list
+----
+
 == Functional way
 
 [source, kotlin]
 ----
-val first = listOf("val1", "val2")
+listOf("val1", "val2")
         .map({ it -> it.toUpperCase() })
 ----
 
@@ -24,24 +39,23 @@ Direct call of functionnal without using a stream
 [source, kotlin]
 ----
 val first = listOf("val1", "val2")
-        .map({ it.toUpperCase() })
-----
-
-[NOTE.speaker]
---
-Default lambda parameter is `it`
---
-
-== Lambda
-
-[source, kotlin]
-----
-val first = listOf("val1", "val2")
-        .map { it.toUpperCase() }
+        .map { it -> it.toUpperCase() }
 ----
 
 [NOTE.speaker]
 --
 Kotlin convention if last parameter is a lambda it can be outside parentheses
+--
+== Lambda
+
+[source, kotlin]
+----
+listOf("val1", "val2")
+        .map { it.toUpperCase() }
+----
+
+[NOTE.speaker]
+--
+Default lambda parameter is `it`
 DSL ? 
 --

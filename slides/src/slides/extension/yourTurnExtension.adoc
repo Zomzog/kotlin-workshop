@@ -1,8 +1,23 @@
 
 == Your turn
 
-Open `Extends.kt` and create an extension for
+Open `Extends.kt` and create
 
-* UntouchablePony.toCustomString()
-* String.toPony()  
+*UntouchablePony.toCustomString()*
 
+*String.toPony()*
+
+== Review
+
+[source, kotlin]
+----
+fun String.toPony(): UntouchablePony {
+    val (name, type) = this.split(" - ")
+    return UntouchablePony(name, type)
+}
+----
+
+[source, kotlin]
+----
+fun UntouchablePony.toCustomString() = "$name - $type"
+----

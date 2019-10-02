@@ -40,15 +40,3 @@ class Pony {
       set(value) { field = value }
 }
 ----
-
-
-== Class
-
-[source, kotlin]
-----
-class Pony {
-    var name: String? = null
-
-    var friendsCount: Int = 1
-}
-----

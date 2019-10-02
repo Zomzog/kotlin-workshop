@@ -1,28 +1,69 @@
 
 == Your turn
 
-Open `Classes.kt` and remove `Workshop.java` and create Kotlin equivalent
+Remove or rename `Workshop.java` 
+
+Open `Classes.kt` and create Kotlin equivalent
+
+== Review
+
+[source, kotlin]
+----
+data class Workshop(val name: String,
+                    var attendeesCount: Long)
+----
+
+[source, kotlin]
+----
+fun helloWorkshop(workshop: Workshop): String {
+    return "Hello to ${workshop.attendeesCount} attendees of ${workshop.name} workshop"
+}
+----
+
+== Simplify With
+
+*with* is a non-extension function that can access members of its argument concisely
+
+[source, hideCode]
+----
+.
+
+.
+----
+
+[NOTE.speaker]
+--
+with access to properties of object directly
+--
+
 
 == Simplify With
 
 `with` is a non-extension function that can access members of its argument concisely
 
-
-[NOTE.speaker]
---
+[source, kotlin]
+----
 with(workshop) {
-    return "Hello to $attendeesCount attendees of $name workshop"
+  return "Hello to $attendeesCount attendees of $name workshop"
 }
---
+----
 
 == Destructuring
 
 Data class allow destructuring calls
 
-[NOTE.speaker]
---
-fun helloWorkshop(workshop: Workshop): String {
-    val (name, count) = workshop;
-    return "Hello to $attendeesCount attendees of $name workshop"
-}
---
+[source, hideCode]
+----
+.
+.
+----
+
+== Destructuring
+
+Data class allow destructuring calls
+
+[source, kotlin]
+----
+val (name, attendeesCount) = workshop
+return "Hello to $attendeesCount attendees of $name workshop"
+----

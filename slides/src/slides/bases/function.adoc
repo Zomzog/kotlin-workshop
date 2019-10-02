@@ -63,7 +63,7 @@ It's optional to specify it for functions
 
 [source, kotlin]
 ----
-fun main() : Unit {
+fun main(): Unit {
     println("hello world")
 }
 ----

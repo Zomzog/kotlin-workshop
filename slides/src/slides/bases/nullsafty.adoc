@@ -11,14 +11,14 @@ val nullable : String = null
 Do you try this? Compiler issue
 --
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----
 val nullable : String? = null
 ----
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----
@@ -45,7 +45,7 @@ nullable.toUpperCase() // KO
 How do we access a nullable ?
 --
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----
@@ -73,7 +73,7 @@ Like optional in java,
 we know not null because tested
 --
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----
@@ -100,7 +100,7 @@ nullable?.toUpperCase()
 Same thing but simplified
 --
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----
@@ -128,7 +128,7 @@ Elvis operator for else null
 --
 
 
-== Null safty
+== Null safety
 
 [source, kotlin]
 ----

@@ -10,4 +10,8 @@ fun helloWorkshop(workshop: Workshop): String {
 fun main() {
     val workshop = Workshop("Kotlin", 42)
     println(helloWorkshop(workshop))
+
+    val list = listOf("val1", "val2")
+    val (first, second) = list
+    println("$first + $second")
 }

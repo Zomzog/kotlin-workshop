@@ -21,34 +21,25 @@ Jetbrains : tools for developpers
 --
 
 
-== Why Kotlin
+== Kotlin requirements
 
-[fragment]#Easy to learn#
-
-[NOTE.speaker]
---
-Specialy for java dev
---
+[fragment]#Better than Java#
 
 [fragment]#Java Interoperability#
-
-[NOTE.speaker]
---
-the new language is going to be introduced gradually, 
-and needs to interoperate smoothly with the existing code base
---
 
 [fragment]#Compilation speed#
 
 [NOTE.speaker]
 --
+the new language is going to be introduced gradually, 
+and needs to interoperate smoothly with the existing code base
+
 long enough to compile with javac,
 and we cannot afford making it any slower
---
 
-[fragment]#Visibility#
-
-[NOTE.speaker]
---
 Jetbrain is more than just an IDE 
 --
+
+[fragment]#Easy to learn#
+
+[fragment]#Visibility#

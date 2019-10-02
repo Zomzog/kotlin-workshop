@@ -1,3 +1,85 @@
 == Your turn
 
-Open `Collection.kt` and implements methods
+Open `Collection.kt` and implement methods
+
+== Review
+
+[source, kotlin]
+----
+fun sum(list: List<String>): Int {
+    return list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+}
+----
+
+
+[source, kotlin]
+----
+fun findFirst10(list: List<String>): Int {
+    return list.asSequence()
+            .map { it.toInt() }
+            .first{ it == 10 }
+}
+----
+
+== Expression
+
+[source, kotlin]
+----
+fun sum(list: List<String>): Int {
+    return list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+}
+----
+
+[source, hideCode]
+----
+.
+
+.
+----
+
+== Expression
+
+[source, kotlin]
+----
+fun sum(list: List<String>): Int {
+    return list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+}
+----
+
+[source, kotlin]
+----
+fun sum(list: List<String>): Int = list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+----
+
+
+== Expression
+
+[source, kotlin]
+----
+fun sum(list: List<String>): Int {
+    return list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+}
+----
+
+[source, kotlin]
+----
+fun sum(list: List<String>) = list.map { it.toInt() }
+            .toIntArray()
+            .sum()
+----
+
+
+[NOTE.speaker]
+--
+type inferred
+--

@@ -10,7 +10,20 @@ fun helloWorkshop(workshop: Workshop): String {
     return "Hello to ${workshop.attendeesCount} attendees of ${workshop.name} workshop"
 }
 
+fun helloWorkshopWith(workshop: Workshop): String {
+    // TODO
+    with(workshop) {
+        return "Hello to $attendeesCount attendees of $name workshop"
+    }
+}
+
+fun helloWorkshopDest(workshop: Workshop): String {
+    // TODO
+    val (name, attendeesCount) = workshop
+    return "Hello to $attendeesCount attendees of $name workshop"
+}
+
 fun main() {
     val workshop = Workshop("Kotlin", 42)
-    println(helloWorkshop(workshop))
+    println(helloWorkshopDest(workshop))
 }

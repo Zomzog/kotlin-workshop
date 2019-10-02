@@ -21,6 +21,11 @@ Kotlin workshop
 
 include::slides/intro.adoc[]
 
+== Here we go
+
+image:here_we_go.png[alt text,height=400px]
+
+
 include::slides/bases/index.adoc[]
 
 include::slides/objects/index.adoc[]

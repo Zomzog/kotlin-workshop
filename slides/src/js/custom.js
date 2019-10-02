@@ -1,4 +1,5 @@
-let defaultCss = 'css/style.css'
+let defaultCss = 'css/zomzog.css'
+let whiteCss = 'css/zomzog-white.css'
 let talendCss = 'css/talend.css'
 
 Reveal.addEventListener( 'dynamic', function() {
@@ -25,8 +26,13 @@ Reveal.configure({
         console.log("talend")
         theme.setAttribute('href',talendCss)
       } else {
-        console.log("default")
-        theme.setAttribute('href',defaultCss)
+        if ( talendCss === theme.getAttribute('href')) {
+          console.log("talend")
+          theme.setAttribute('href',whiteCss)
+        } else {
+          console.log("default")
+          theme.setAttribute('href',defaultCss)
+        }
       }
     },
   }

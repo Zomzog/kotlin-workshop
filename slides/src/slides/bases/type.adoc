@@ -13,6 +13,6 @@ Some of the types can have a special internal representation
 
 == Unit is the new Void
 
-Unit is an object
+[fragment]#Unit is an object#
 
 [fragment]#Unit.toString()#
