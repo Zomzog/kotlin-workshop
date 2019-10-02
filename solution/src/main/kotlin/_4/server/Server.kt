@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     val server = embeddedServer(Netty, 8080) {
         routing {
             get("/hello") {
-                delay(1000)
+                delay(5000)
                 call.respondText("Hello, Talend! It's ${OffsetDateTime.now()}", ContentType.Text.Html)
             }
             get("/failEvery10") {
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
                     println("Fail")
                     throw Exception("fail !")
                 } else {
-                    delay(1000)
+                    delay(5000)
                     call.respondText("Hello, Talend! It's ${OffsetDateTime.now()}", ContentType.Text.Html)
                 }
             }
