@@ -2,7 +2,7 @@
 [source, kotlin]
 ----
 class Pony {
-    var name: String
+    val name: String
     var friendsCount: Int
 
 
@@ -16,7 +16,7 @@ class Pony {
 [source, kotlin]
 ----
 class Pony {
-    var name: String
+    val name: String
     var friendsCount: Int
 
     constructor(name: String, friendsCount: Int = 0){
@@ -31,7 +31,7 @@ class Pony {
 [source, kotlin]
 ----
 class Pony(name: String, friendsCount: Int = 0) {
-    var name: String = name
+    val name: String = name
     var friendsCount = friendsCount
 
 

@@ -38,7 +38,7 @@ Direct call of functionnal without using a stream
 
 [source, kotlin]
 ----
-val first = listOf("val1", "val2")
+listOf("val1", "val2")
         .map { it -> it.toUpperCase() }
 ----
 
@@ -57,5 +57,6 @@ listOf("val1", "val2")
 [NOTE.speaker]
 --
 Default lambda parameter is `it`
+
 DSL ? 
 --

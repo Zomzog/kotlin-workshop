@@ -10,6 +10,8 @@ Pragmatic: take the best of others (Java, C#, Groovy...)
 
 [fragment]#Java Interoperability by design#
 
+[fragment]#
+
 == Not seen
 
 [fragment]#Most of the langage#
@@ -29,11 +31,18 @@ Smart Casts, when, object, Operator overloading..
 
 Integration by : 
 
+[fragment]#Android#
+
 [fragment]#Gradle#
 
 [fragment]#SpringBoot#
 
 [fragment]#Junit#
+
+[NOTE.speaker]
+--
+Over 50% of professional Android developers now use Kotlin
+--
 
 == Kotlin universe
 
@@ -44,3 +53,8 @@ Integration by :
 [fragment]#assertk#
 
 [fragment]#Kodein (DI)#
+
+[NOTE.speaker]
+--
+Dagger / Guice
+--

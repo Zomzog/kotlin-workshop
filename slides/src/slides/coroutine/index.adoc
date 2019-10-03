@@ -47,6 +47,8 @@ suspend fun start() {
 }
 ----
 
+== Start
+
 [source, kotlin]
 ----
 suspend fun start() {
@@ -57,6 +59,8 @@ suspend fun start() {
     }
 }
 ----
+
+== Start
 
 [source, kotlin]
 ----

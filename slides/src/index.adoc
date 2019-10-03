@@ -8,6 +8,14 @@
 :imagesdir: images
 :customcss: css/custom.css
 
+
+== Git clone
+
+http://bit.do/talendkotlin
+
+image:qr.png[]
+
+
 [%notitle]
 [.title]
 == Title

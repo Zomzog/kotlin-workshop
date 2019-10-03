@@ -111,6 +111,48 @@ var mutable = mutableMapOf("key" to "val")
 --
 
 == Range
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+
+== Range
+[source, kotlin]
+----
+for (i in 1..4) print(i)
+----
+[source, hideCode]
+----
+.
+----
+[source, hideCode]
+----
+.
+----
+
+== Range
+[source, kotlin]
+----
+for (i in 1..4) print(i)
+----
+[source, kotlin]
+----
+for (i in 4 downTo 1) print(i)
+----
+[source, hideCode]
+----
+.
+----
+
+== Range
 [source, kotlin]
 ----
 for (i in 1..4) print(i)
