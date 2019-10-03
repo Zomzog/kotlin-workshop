@@ -1,11 +1,13 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Title</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="node_modules/reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="css/zomzog.css" id="theme"><link href="node_modules/reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Git clone</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="node_modules/reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="css/zomzog.css" id="theme"><link href="node_modules/reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "node_modules/reveal.js/css/print/pdf.css" : "node_modules/reveal.js/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--><link rel="stylesheet" href="css/custom.css"></head><body><div class="reveal"><div class="slides"><section id="title" class="title" data-transition="fade" data-background-image="images/background.jpg" data-background-size="cover" data-background-transition="fade">
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--><link rel="stylesheet" href="css/custom.css"></head><body><div class="reveal"><div class="slides"><section id="git_clone" data-transition="fade"><h2>Git clone</h2><div class="paragraph"><p><a href="http://bit.do/talendkotlin" class="bare">http://bit.do/talendkotlin</a></p></div>
+<div class="paragraph"><p><span class="image"><img src="images/qr.png" alt="qr"></span></p></div></section>
+<section id="title" class="title" data-transition="fade" data-background-image="images/background.jpg" data-background-size="cover" data-background-transition="fade">
 <div class="paragraph"><p>Kotlin workshop</p></div>
 <aside class="notes"></aside></section>
-<section id="git_clone" data-transition="fade"><h2>Git clone</h2><div class="paragraph"><p><a href="http://bit.do/talendkotlin" class="bare">http://bit.do/talendkotlin</a></p></div>
+<section id="git_clone_2" data-transition="fade"><h2>Git clone</h2><div class="paragraph"><p><a href="http://bit.do/talendkotlin" class="bare">http://bit.do/talendkotlin</a></p></div>
 <div class="paragraph"><p><span class="image"><img src="images/qr.png" alt="qr"></span></p></div></section>
 <section id="by_jetbrains" data-transition="fade"><h2>By JetBrains</h2><div class="paragraph"><p><span class="fragment">IntelliJ</span></p></div>
 <div class="paragraph"><p><span class="fragment">PyCHarm</span></p></div>
@@ -138,7 +140,7 @@ In any case we know it can be null and we make a choice</p></div></aside></secti
       set(value) { field = value }
 }</code></pre></div></div></section>
 <section id="constructor" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
-    var name: String
+    val name: String
     var friendsCount: Int
 
 
@@ -147,7 +149,7 @@ In any case we know it can be null and we make a choice</p></div></aside></secti
 
 }</code></pre></div></div></section>
 <section id="constructor_2" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony {
-    var name: String
+    val name: String
     var friendsCount: Int
 
     constructor(name: String, friendsCount: Int = 0){
@@ -156,7 +158,7 @@ In any case we know it can be null and we make a choice</p></div></aside></secti
     }
 }</code></pre></div></div></section>
 <section id="constructor_3" data-transition="fade"><h2>Constructor</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">class Pony(name: String, friendsCount: Int = 0) {
-    var name: String = name
+    val name: String = name
     var friendsCount = friendsCount
 
 
@@ -262,7 +264,16 @@ return "Hello to $attendeesCount attendees of $name workshop"</code></pre></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var twoVal  = mapOf("key" to "val")</code></pre></div></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">var mutable = mutableMapOf("key" to "val")</code></pre></div></div>
 <aside class="notes"></aside></section>
-<section id="range" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..4) print(i)</code></pre></div></div>
+<section id="range" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div></section>
+<section id="range_2" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..4) print(i)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div></section>
+<section id="range_3" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..4) print(i)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 4 downTo 1) print(i)</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="hideCode language-hideCode">.</code></pre></div></div></section>
+<section id="range_4" data-transition="fade"><h2>Range</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..4) print(i)</code></pre></div></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 4 downTo 1) print(i)</code></pre></div></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">for (i in 1..8 step 2) print(i)</code></pre></div></div></section>
 <section id="specialized" data-transition="fade"><h2>Specialized</h2><div class="paragraph"><p><span class="fragment">IntRange</span></p></div>
@@ -280,13 +291,13 @@ val (first, second) = list</code></pre></div></div></section>
 <section id="functional_way" data-transition="fade"><h2>Functional way</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">listOf("val1", "val2")
         .map({ it -&gt; it.toUpperCase() })</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>Direct call of functionnal without using a stream</p></div></aside></section>
-<section id="lambda" data-transition="fade"><h2>Lambda</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">val first = listOf("val1", "val2")
+<section id="lambda" data-transition="fade"><h2>Lambda</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">listOf("val1", "val2")
         .map { it -&gt; it.toUpperCase() }</code></pre></div></div>
 <aside class="notes"><div class="paragraph"><p>Kotlin convention if last parameter is a lambda it can be outside parentheses</p></div></aside></section>
 <section id="lambda_2" data-transition="fade"><h2>Lambda</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">listOf("val1", "val2")
         .map { it.toUpperCase() }</code></pre></div></div>
-<aside class="notes"><div class="paragraph"><p>Default lambda parameter is <code>it</code>
-DSL ?</p></div></aside></section>
+<aside class="notes"><div class="paragraph"><p>Default lambda parameter is <code>it</code></p></div>
+<div class="paragraph"><p>DSL ?</p></div></aside></section>
 <section id="kotlin_stream" data-transition="fade"><h2>kotlin Stream ?</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">Stream.of("val1", "val2", "val3")
         .peek(it -&gt; System.out.println(it))
         .filter(it -&gt; "val2".equals(it))
@@ -384,15 +395,15 @@ Do not override existing functions</p></div></aside></section>
 
 
     }
-}</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">suspend fun start() {
+}</code></pre></div></div></section>
+<section id="start_2" data-transition="fade"><h2>Start</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">suspend fun start() {
     coroutineScope {
         launch {
 
         }
     }
-}</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">suspend fun start() {
+}</code></pre></div></div></section>
+<section id="start_3" data-transition="fade"><h2>Start</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="kotlin language-kotlin">suspend fun start() {
     coroutineScope {
         launch {
             doSomthing()
@@ -403,20 +414,24 @@ Do not override existing functions</p></div></aside></section>
 <div class="paragraph"><p><span class="fragment">Null safety</span></p></div>
 <div class="paragraph"><p><span class="fragment">Coroutines</span></p></div>
 <div class="paragraph"><p><span class="fragment">~30% less line of code</span></p></div>
-<div class="paragraph"><p><span class="fragment">Java Interoperability by design</span></p></div></section>
+<div class="paragraph"><p><span class="fragment">Java Interoperability by design</span></p></div>
+<div class="paragraph"><p>[fragment]#</p></div></section>
 <section id="not_seen" data-transition="fade"><h2>Not seen</h2><div class="paragraph"><p><span class="fragment">Most of the langage</span></p></div>
 <aside class="notes"><div class="paragraph"><p>Smart Casts, when, object, Operator overloading..</p></div></aside>
 <div class="paragraph"><p><span class="fragment">Kotlin native</span></p></div>
 <div class="paragraph"><p><span class="fragment">Kotlin Multiplatform</span></p></div>
 <div class="paragraph"><p><span class="fragment">Java to Kotlin IntelliJ</span></p></div></section>
 <section id="not_seen_2" data-transition="fade"><h2>Not seen</h2><div class="paragraph"><p>Integration by :</p></div>
+<div class="paragraph"><p><span class="fragment">Android</span></p></div>
 <div class="paragraph"><p><span class="fragment">Gradle</span></p></div>
 <div class="paragraph"><p><span class="fragment">SpringBoot</span></p></div>
-<div class="paragraph"><p><span class="fragment">Junit</span></p></div></section>
+<div class="paragraph"><p><span class="fragment">Junit</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Over 50% of professional Android developers now use Kotlin</p></div></aside></section>
 <section id="kotlin_universe" data-transition="fade"><h2>Kotlin universe</h2><div class="paragraph"><p><span class="fragment">Ktor</span></p></div>
 <div class="paragraph"><p><span class="fragment">mockk</span></p></div>
 <div class="paragraph"><p><span class="fragment">assertk</span></p></div>
-<div class="paragraph"><p><span class="fragment">Kodein (DI)</span></p></div></section>
+<div class="paragraph"><p><span class="fragment">Kodein (DI)</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Dagger / Guice</p></div></aside></section>
 <section id="questions" data-transition="fade" data-background-image="images/questions.png" data-background-size="contain" data-background-transition="fade"><h2>Questions</h2></section>
 <section id="thanks" class="title" data-transition="fade"><div class="paragraph"><p>Thanks !</p></div></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
